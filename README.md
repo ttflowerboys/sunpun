@@ -1,13 +1,21 @@
 # 三镇网络科技有限公司
 
 ## 说明
-* 营销官网：`http://www.threetowns.cn`
-* 技术支持：`http://www.flowerboys.cn`
+* 版本说明：`移动版`
+* 线上网址：`http://m.uwedding.com.cn`
+* 参考网址：`http://www.loveniwed.com/m`
+
+## 设计
+| 首页 | 导航 | 内页 |
+|--------|--------|--------|
+| ![index](UI/index.jpg) | ![index-nav](UI/index-nav.jpg)|![page](UI/page.jpg)|
+
+***
 
 ## 技术支持
 >[三镇网络技术有限公司](http://www.threetowns.cn)，专注于网络营销、电子商务和企业定制化建站服务，把正确的营销方向当作一种使命，帮助客户提供专业的网络营销方案。其雄厚的实力，专业的营销团队一直活跃于各大电子商务平台的前线。
-
-***
+>* 营销官网：`http://www.threetowns.cn`
+>* 技术支持：`http://www.flowerboys.cn`
 
 ## 联系方式
 
