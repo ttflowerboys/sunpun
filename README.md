@@ -1,13 +1,12 @@
 # 三镇网络科技有限公司
 
 ## 说明
-* 网址：`http://www.threetowns.cn`
 * 参考网站：`http://www.utb999.cn`
 
 ## 案例截图
 | 首页 |
 |--------|
-|![index](UI/index.png)|
+|![index](UI/index.jpg)|
 
 ***
 
