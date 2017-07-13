@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta name="format-detection" content="telephone=no" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>核桃设计计</title>
+	<link href="static/css/style.css" rel="stylesheet"></head>
+    
+	<script>
+		!(function(win, doc){ function setFontSize() { var winWidth =  window.innerWidth;var size = (winWidth / 640) * 100;doc.documentElement.style.fontSize = size + 'px' ;}var evt = 'onorientationchange' in win ? 'orientationchange' : 'resize';var timer = null; win.addEventListener(evt, function () { clearTimeout(timer);timer = setTimeout(setFontSize, 300);}, false); win.addEventListener("pageshow", function(e) { if (e.persisted) { clearTimeout(timer);timer = setTimeout(setFontSize, 300);}
+		    }, false);setFontSize();}(window, document));
+	</script>
+
+<body>
+	<header class="bbox ">
+		<div class="list"></div>
+		<div class="logo"></div>
+		<a href="tel:15616172879"><div class="tel"></div></a>
+	</header>
+	<div class="nav">
+		<div class="_top bbox"></div>
+		<ul class="clearfix bbox">
+			<li><a href="http://m.2012heart.com/"><p class="text">首页</p><p class="line"></p></a></li>
+			<li><a href="list.html"><p class="text">核桃设计</p><p class="line"></p></a></li>
+			<li><a href="list.html"><p class="text">品牌形象</p><p class="line"></p></a></li>
+			<li><a href="list.html"><p class="text">时尚前沿</p><p class="line"></p></a></li>
+			<li><a href="list.html"><p class="text">商品包装</p><p class="line"></p></a></li>
+			<li><a href="list.html"><p class="text">创意画册</p><p class="line"></p></a></li>
+			<li><a href="list.html"><p class="text">产品摄影</p></a></li>
+			<li><a href="contact.html"><p class="text">联系我们</p></a></li>
+ 
+		</ul>
+		<p class="_bot bbox " style="margin-top: .8rem;">A visual team in fashion industry</p>
+		<p class="_bot bbox">with professional service</p>
+	</div>
+    
+    <div class="click_wrap">
+    
+	<div class="banner">
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		    	<div class="swiper-slide"><img src="http://m.2012heart.com/uploadfile/2017/0321/20170321021021796.png" alt=""></div>
+		    </div>
+		    <!-- 如果需要分页器 -->
+		    <div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<div class="lib">
+		<ul class="bbox clearfix">
+			<li>
+				<a href=""><span class="text">品牌</span><span class="line"></span></a>
+			</li>
+			<li>
+				<a href=""><span class="text">时尚</span><span class="line"></span></a>
+			</li>
+			<li>
+				<a href=""><span class="text">包装</span><span class="line"></span></a>
+			</li>
+			<li>
+				<a href=""><span class="text">画册</span><span class="line"></span></a>
+			</li>
+			<li>
+				<a href=""><span class="text">摄影</span></a>
+			</li>
+		</ul>
+	</div>
+	<div class="bar">
+		<ul>
+			<li><a href=""><img src="static/images/assets/nav01.jpg" alt=""></a></li>
+			<li><a href=""><img src="static/images/assets/nav02.jpg" alt=""></a></li>
+			<li><a href=""><img src="static/images/assets/nav03.jpg" alt=""></a></li>
+			<li><a href=""><img src="static/images/assets/nav04.jpg" alt=""></a></li>
+			<li><a href=""><img src="static/images/assets/nav05.jpg" alt=""></a></li>
+            
+       
+            
+		</ul>		
+	</div>
+	<footer>
+		<div class="footer_bg bbox">
+			<p class="yop_img"><img src="static/images/assets/1_19.png" alt=""> </p>
+			<p class="line l1"></p>
+			<p class="ttel"><span class="icon"></span><span>15616172879</span><span class="icon"></span><span>18684812927</span></p>
+			<p class="line l2"></p>
+			<p class="address">湖南省长沙市雨花区韶山南路</p>
+			<p class="address">828号恒盛世家11栋3单元506（大润发后）</p>
+		</div>
+		<div class="copyright">
+			<p>A visual team in fashion industry professional service</p>
+		</div>
+	</footer>
+    
+    </div>
+    
+	<script src='static/js/jquery-2.1.1.min.js'></script>
+	<script src='static/js/fastclick.js'></script>
+	<script src='static/js/swiper.jquery.min.js'></script>
+	<script>        
+	  var mySwiper = new Swiper ('.swiper-container', {
+	   	autoplay: 5000,
+	    direction: 'horizontal',
+	    loop: true,
+	    // 如果需要分页器
+	    pagination: '.swiper-pagination'
+	  })        
+	  </script>
+<script type="text/javascript" src="static/js/app.js"></script></body>
+</html>
