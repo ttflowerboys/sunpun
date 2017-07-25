@@ -60,3 +60,9 @@ background-image: linear-gradient(to right, #157db7, #2ed3df);}
 .FooterLink a{margin-right: 24px;font-size: 20px;color: #404040;display: inline-block;white-space: nowrap;}
 .FooterLink a:last-child{margin-right: 0;}
 .copyright{padding: 30px 0 10px;font-size: 20px;line-height: 26px;color: #999;}
+
+.Page{padding: 48px 28px 76px;background: #fff;overflow: hidden;}
+.Page img{max-width: 100%;}
+
+.breadCrumb{font-size: 18px;line-height: 26px;color: #999;margin-bottom: 32px;}
+.breadCrumb a{color: #999;}
