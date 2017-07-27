@@ -246,3 +246,32 @@ background-image: linear-gradient(to right, #157db7, #2ed3df);}
 .relPostList{overflow: hidden;margin-left: -5px;}
 .relPostList li{width: 228px;margin-left: 5px;background: #ccc;overflow: hidden;float: left;}
 .relPostList li img{width: 100%;height: 100%;}
+
+
+/* selectCity */
+.choose_city {position: relative;margin: 30px 18px;height: auto;font-size: 18px;border: 3px solid #64ccd2;background: #fff;}
+.choose_city .cs_zs {margin-bottom: 20px;overflow: hidden;clear: both}
+.choose_city .cs_zs .xzcs_dt a {margin: 0 18px 12px 0;font-size: 18px;color: #5f675e}
+.choose_city .cs_zs .xzcs_dt a.se_cur {color: #ff7e00;font-weight: bold}
+.choose_city .rmcs {margin-top: 17px;line-height: 50px;clear: both;display: flex;}
+.choose_city .title_type1{padding-left: 28px;width: 118px;float: left;font-weight: bold;color: #333}
+.choose_city .title_type2 {padding-left: 28px;width: 118px;margin-bottom: 16px;font-weight: bold;color: #595959}
+.choose_city .xzcs_dt {flex: 1;padding-left: 28px;}
+
+.choose_city .rmcs span,.choose_city .rmcs span a {color: #64ccd2;float: left;font-size: 22px;}
+.choose_city .cs_zs .xzcs_dt span a {color: #2baa1b}
+.choose_city .xzcs_dt a {margin-right: 28px;display: inline-block}
+.choose_city .rm_gkt {float: left;font-size: 12px;color: #333}
+.choose_city .xzcs_dt .rm_gkt i {color: #f36f20}
+.choose_city .rm_cz {margin-top: 3px;_margin-top: 10px;line-height: 30px}
+.choose_city .rm_cz select {height: 32px;font-size: 20px;border: 1px solid #d7d7d7;vertical-align: middle;}
+.choose_city .rm_cz #shen {width: 133px}
+.choose_city .rm_cz #city {width: 133px}
+.choose_city .rm_cz .smt {font-size: 18px;padding: 0 32px;height: 32px;line-height: 32px;text-align: center;border: none;color: #fff;font-weight: bold;background: #ff7b00;border-radius: 3px;transition: .3s background linear;cursor: pointer;overflow: hidden;vertical-align: middle}
+.choose_city .rm_cz .smt:hover {background: #ff9300}
+.letter_search {margin: 20px 0 20px 0;line-height: 42px;border-top: 1px solid #d7d7d7;border-bottom: 1px solid #d7d7d7;background: #f4f4f4}
+.letter_search strong.title_type2 {width: auto}
+.letter_search .letter_list {margin-top: 10px;padding-left: 28px;font-size: 0;overflow: hidden;}
+.letter_search .letter_list a {display: inline-block;font-size: 18px;color: #666;width: 28px;height: 28px;line-height: 28px;text-align: center;overflow: hidden}
+.letter_search .letter_list a.se_cur {background: #64ccd2;color: #fff}
+
