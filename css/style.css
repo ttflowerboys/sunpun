@@ -111,3 +111,18 @@ background-image: linear-gradient(to right, #157db7, #2ed3df);}
 .feedbackForm .vPic{width: 116px;height: 46px;vertical-align: middle;float: left;}
 
 
+/* contactList */
+.contactList{padding: 38px 0 0 54px;margin-bottom: 52px;border-radius: 5px; border: 1px solid #c9c9c9;background: #fff;}
+.contactList li{position: relative;height: 28px;line-height: 28px;padding-left: 56px;margin-bottom: 38px;}
+.contactList li i{width: 26px;height: 28px;margin-left: -56px;float: left;background: url(../images/contact-sprite.png) no-repeat;display: block;overflow: hidden;}
+.contactList li span{font-size: 22px;white-space: nowrap;color: #333;}
+.contactList .icon-addr{background-position: 0 0;}
+.contactList .icon-print{background-position: -26px 0;}
+.contactList .icon-mail{background-position: -52px 0;}
+.contactList .icon-phone{background-position: -78px 0;}
+.contactList .icon-domain{background-position: -104px 0;}
+.contactList .icon-tel{background-position: -130px 0;}
+
+.Map{width: 100%;overflow: hidden;}
+.Map img{width: 100%;height: auto;}
+
