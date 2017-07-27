@@ -2,28 +2,30 @@
 <html lang="zh-cn">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>首页</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.bootcss.com/jquery/1.10.0/jquery.min.js"></script>
+  <script src="js/common.js"></script>
 </head>
 <body>
   <div class="top">
     <div class="w clearfix">
       <div class="topLeft">
-        <i class="icon-address"></i><label class="current_city">北京</label><a href="" rel="nofollow">[切换]</a>
+        <i class="icon-address"></i><label class="current_city">北京</label><a href="selectCity.html" rel="nofollow">[ 切换 ]</a>
       </div>
     </div>
   </div><!-- top end -->
   <div class="header w">
     <h1 class="logo"><a href="">记帐本</a></h1>
     <ul class="nav">
-      <li><a href="">首页</a></li>
-      <li><a href="">注册公司</a></li>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="enroll.html">注册公司</a></li>
       <li><a href="">代理记账</a></li>
       <li><a href="">人事担保</a></li>
       <li><a href="">商标组册</a></li>
       <li><a href="">网站建设</a></li>
       <li><a href="">网站优化</a></li>
-      <li><a href="">新闻动态</a></li>
+      <li><a href="news.html">新闻动态</a></li>
     </ul>
     <div class="search">
       <form action="">
@@ -36,8 +38,11 @@
     <div class="js-sCont">
       <ul>
         <li><a href=""><img src="images/banner.jpg" alt=""></a></li>
+        <li><a href=""><img src="images/banner1.jpg" alt=""></a></li>
       </ul>
     </div>
+    <a href="javascript:;" class="js-prev"></a>
+    <a href="javascript:;" class="js-next"></a>
     <div class="indexSearch">
       <div class="searchTop"><h5 class="title">免费咨询</h5><span class="seperate">|</span><span class="tip">记账本已为<b>1234567</b>人提供咨询</span></div>
       <div class="searchForm">
@@ -55,13 +60,13 @@
 	  	<h3><strong>注册公司</strong></h3>
 	  	<p>注册公司注册公司注册公司注册公司注册公司注册公司</p>
   	</div>
-  	<div class="J_Tab">
+  	<div class="J_Cate">
   		<ul class="J_TabHd cateList">
   			<li class="cur">种类A</li>
-  			<li>种类A</li>
-  			<li>种类A</li>
-  			<li>种类A</li>
-  			<li>种类A</li>
+  			<li>种类B</li>
+  			<li>种类C</li>
+  			<li>种类D</li>
+  			<li>种类E</li>
   		</ul>
   		<div class="J_TabBd">
   			<ul class="Items companyList">
@@ -76,6 +81,10 @@
   				<li><i class="icon-shenpi"></i><h5>专项审批</h5><p>工商注册工商注册工商组册</p><div class="price">￥300</div><a href="">立即咨询</a></li>
   				<li><i class="icon-zizhi"></i><h5>资质审批</h5><p>工商注册工商注册工商组册</p><div class="price">￥300</div><a href="">立即咨询</a></li>
   			</ul>
+        <ul class="Items companyList"><li><i class="icon-gongshang"></i><h5>工商组册</h5><p>工商注册工商注册工商组册</p><div class="price">￥400</div><a href="">立即咨询</a></li><li><i class="icon-zhuanrang"></i><h5>转让执照</h5><p>工商注册工商注册工商组册</p><div class="price">￥400</div><a href="">立即咨询</a></li><li><i class="icon-shenpi"></i><h5>专项审批</h5><p>工商注册工商注册工商组册</p><div class="price">￥400</div><a href="">立即咨询</a></li><li><i class="icon-zizhi"></i><h5>资质审批</h5><p>工商注册工商注册工商组册</p><div class="price">￥400</div><a href="">立即咨询</a></li></ul>
+        <ul class="Items companyList"><li><i class="icon-gongshang"></i><h5>工商组册</h5><p>工商注册工商注册工商组册</p><div class="price">￥500</div><a href="">立即咨询</a></li><li><i class="icon-zhuanrang"></i><h5>转让执照</h5><p>工商注册工商注册工商组册</p><div class="price">￥500</div><a href="">立即咨询</a></li><li><i class="icon-shenpi"></i><h5>专项审批</h5><p>工商注册工商注册工商组册</p><div class="price">￥500</div><a href="">立即咨询</a></li><li><i class="icon-zizhi"></i><h5>资质审批</h5><p>工商注册工商注册工商组册</p><div class="price">￥500</div><a href="">立即咨询</a></li></ul>
+        <ul class="Items companyList"><li><i class="icon-gongshang"></i><h5>工商组册</h5><p>工商注册工商注册工商组册</p><div class="price">￥600</div><a href="">立即咨询</a></li><li><i class="icon-zhuanrang"></i><h5>转让执照</h5><p>工商注册工商注册工商组册</p><div class="price">￥600</div><a href="">立即咨询</a></li><li><i class="icon-shenpi"></i><h5>专项审批</h5><p>工商注册工商注册工商组册</p><div class="price">￥600</div><a href="">立即咨询</a></li><li><i class="icon-zizhi"></i><h5>资质审批</h5><p>工商注册工商注册工商组册</p><div class="price">￥600</div><a href="">立即咨询</a></li></ul>
+        <ul class="Items companyList"><li><i class="icon-gongshang"></i><h5>工商组册</h5><p>工商注册工商注册工商组册</p><div class="price">￥700</div><a href="">立即咨询</a></li><li><i class="icon-zhuanrang"></i><h5>转让执照</h5><p>工商注册工商注册工商组册</p><div class="price">￥700</div><a href="">立即咨询</a></li><li><i class="icon-shenpi"></i><h5>专项审批</h5><p>工商注册工商注册工商组册</p><div class="price">￥700</div><a href="">立即咨询</a></li><li><i class="icon-zizhi"></i><h5>资质审批</h5><p>工商注册工商注册工商组册</p><div class="price">￥700</div><a href="">立即咨询</a></li></ul>
   		</div>
   	</div> <!-- END -->
   	<div class="commonTitle"><h3><strong>服务流程</strong></h3></div>
@@ -99,7 +108,7 @@
         <h3><strong>代理记账</strong></h3>
         <p>代理记账代理记账代理记账代理记账代理记账代理记账</p>
       </div>
-      <div class="J_Tab">
+      <div class="J_Type">
         <ul class="J_TabHd typeList">
           <li class="cur">小规模代账</li>
           <li>小规模代账</li>
@@ -124,6 +133,10 @@
               <li><div class="pic"><img src="images/type3.jpg" alt=""></div><div class="info"><div class="round"><strong>高新类</strong><span>￥300</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li>
               <li><div class="pic"><img src="images/type4.jpg" alt=""></div><div class="info"><div class="round"><strong>只保税</strong><span>￥300</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li>
           </ul>
+          <ul class="Items typeCardList clearfix"><li><div class="pic"><img src="images/type1.jpg" alt=""></div><div class="info"><div class="round"><strong>服务类</strong><span>￥400</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li><li><div class="pic"><img src="images/type2.jpg" alt=""></div><div class="info"><div class="round"><strong>销售类</strong><span>￥400</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li><li><div class="pic"><img src="images/type3.jpg" alt=""></div><div class="info"><div class="round"><strong>高新类</strong><span>￥400</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li><li><div class="pic"><img src="images/type4.jpg" alt=""></div><div class="info"><div class="round"><strong>只保税</strong><span>￥400</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li></ul>
+          <ul class="Items typeCardList clearfix"><li><div class="pic"><img src="images/type1.jpg" alt=""></div><div class="info"><div class="round"><strong>服务类</strong><span>￥500</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li><li><div class="pic"><img src="images/type2.jpg" alt=""></div><div class="info"><div class="round"><strong>销售类</strong><span>￥500</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li><li><div class="pic"><img src="images/type3.jpg" alt=""></div><div class="info"><div class="round"><strong>高新类</strong><span>￥500</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li><li><div class="pic"><img src="images/type4.jpg" alt=""></div><div class="info"><div class="round"><strong>只保税</strong><span>￥500</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li></ul>
+          <ul class="Items typeCardList clearfix"><li><div class="pic"><img src="images/type1.jpg" alt=""></div><div class="info"><div class="round"><strong>服务类</strong><span>￥600</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li><li><div class="pic"><img src="images/type2.jpg" alt=""></div><div class="info"><div class="round"><strong>销售类</strong><span>￥600</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li><li><div class="pic"><img src="images/type3.jpg" alt=""></div><div class="info"><div class="round"><strong>高新类</strong><span>￥600</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li><li><div class="pic"><img src="images/type4.jpg" alt=""></div><div class="info"><div class="round"><strong>只保税</strong><span>￥600</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li></ul>
+          <ul class="Items typeCardList clearfix"><li><div class="pic"><img src="images/type1.jpg" alt=""></div><div class="info"><div class="round"><strong>服务类</strong><span>￥700</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li><li><div class="pic"><img src="images/type2.jpg" alt=""></div><div class="info"><div class="round"><strong>销售类</strong><span>￥700</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li><li><div class="pic"><img src="images/type3.jpg" alt=""></div><div class="info"><div class="round"><strong>高新类</strong><span>￥700</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li><li><div class="pic"><img src="images/type4.jpg" alt=""></div><div class="info"><div class="round"><strong>只保税</strong><span>￥700</span></div><p>服务类服务类服务类服务类</p><a href="">立即咨询</a></div></li></ul>
         </div>
       </div>
     </div>
@@ -200,6 +213,17 @@
               <div class="qr"><img src="images/qr.jpg" alt=""></div>
             </div>
           </li>
+          <li><div class="detail"><img src="images/pic.jpg" alt=""><div class="detail-title">2工商注册顾问:杨烁 <small> 丰台区小屯路 (85m²)</small></div><p class="detail-desc">昨天进的电视柜+酒柜，和茶几，强力国产板材，4600元。小米55寸的电视放上去，刚刚好，客厅一下子满了。现在纠结钟表摆放位置，如果放之前的蓝墙上，还是喜欢黑色表，但是装修师傅建议表不放在北墙，刚好那面蓝墙就是北墙。放在电视墙，也方便看时间，...</p></div><div class="show"><div class="pic"><img src="images/pic1.jpg" alt=""></div><div class="qr"><img src="images/qr.jpg" alt=""></div></div></li>
+          <li><div class="detail"><img src="images/pic.jpg" alt=""><div class="detail-title">3工商注册顾问:杨烁 <small> 丰台区小屯路 (85m²)</small></div><p class="detail-desc">昨天进的电视柜+酒柜，和茶几，强力国产板材，4600元。小米55寸的电视放上去，刚刚好，客厅一下子满了。现在纠结钟表摆放位置，如果放之前的蓝墙上，还是喜欢黑色表，但是装修师傅建议表不放在北墙，刚好那面蓝墙就是北墙。放在电视墙，也方便看时间，...</p></div><div class="show"><div class="pic"><img src="images/pic1.jpg" alt=""></div><div class="qr"><img src="images/qr.jpg" alt=""></div></div></li>
+          <li><div class="detail"><img src="images/pic.jpg" alt=""><div class="detail-title">4工商注册顾问:杨烁 <small> 丰台区小屯路 (85m²)</small></div><p class="detail-desc">昨天进的电视柜+酒柜，和茶几，强力国产板材，4600元。小米55寸的电视放上去，刚刚好，客厅一下子满了。现在纠结钟表摆放位置，如果放之前的蓝墙上，还是喜欢黑色表，但是装修师傅建议表不放在北墙，刚好那面蓝墙就是北墙。放在电视墙，也方便看时间，...</p></div><div class="show"><div class="pic"><img src="images/pic1.jpg" alt=""></div><div class="qr"><img src="images/qr.jpg" alt=""></div></div></li>
+          <li><div class="detail"><img src="images/pic.jpg" alt=""><div class="detail-title">5工商注册顾问:杨烁 <small> 丰台区小屯路 (85m²)</small></div><p class="detail-desc">昨天进的电视柜+酒柜，和茶几，强力国产板材，4600元。小米55寸的电视放上去，刚刚好，客厅一下子满了。现在纠结钟表摆放位置，如果放之前的蓝墙上，还是喜欢黑色表，但是装修师傅建议表不放在北墙，刚好那面蓝墙就是北墙。放在电视墙，也方便看时间，...</p></div><div class="show"><div class="pic"><img src="images/pic1.jpg" alt=""></div><div class="qr"><img src="images/qr.jpg" alt=""></div></div></li>
+          <li><div class="detail"><img src="images/pic.jpg" alt=""><div class="detail-title">6工商注册顾问:杨烁 <small> 丰台区小屯路 (85m²)</small></div><p class="detail-desc">昨天进的电视柜+酒柜，和茶几，强力国产板材，4600元。小米55寸的电视放上去，刚刚好，客厅一下子满了。现在纠结钟表摆放位置，如果放之前的蓝墙上，还是喜欢黑色表，但是装修师傅建议表不放在北墙，刚好那面蓝墙就是北墙。放在电视墙，也方便看时间，...</p></div><div class="show"><div class="pic"><img src="images/pic1.jpg" alt=""></div><div class="qr"><img src="images/qr.jpg" alt=""></div></div></li>
+          <li><div class="detail"><img src="images/pic.jpg" alt=""><div class="detail-title">7工商注册顾问:杨烁 <small> 丰台区小屯路 (85m²)</small></div><p class="detail-desc">昨天进的电视柜+酒柜，和茶几，强力国产板材，4600元。小米55寸的电视放上去，刚刚好，客厅一下子满了。现在纠结钟表摆放位置，如果放之前的蓝墙上，还是喜欢黑色表，但是装修师傅建议表不放在北墙，刚好那面蓝墙就是北墙。放在电视墙，也方便看时间，...</p></div><div class="show"><div class="pic"><img src="images/pic1.jpg" alt=""></div><div class="qr"><img src="images/qr.jpg" alt=""></div></div></li>
+          <li><div class="detail"><img src="images/pic.jpg" alt=""><div class="detail-title">8工商注册顾问:杨烁 <small> 丰台区小屯路 (85m²)</small></div><p class="detail-desc">昨天进的电视柜+酒柜，和茶几，强力国产板材，4600元。小米55寸的电视放上去，刚刚好，客厅一下子满了。现在纠结钟表摆放位置，如果放之前的蓝墙上，还是喜欢黑色表，但是装修师傅建议表不放在北墙，刚好那面蓝墙就是北墙。放在电视墙，也方便看时间，...</p></div><div class="show"><div class="pic"><img src="images/pic1.jpg" alt=""></div><div class="qr"><img src="images/qr.jpg" alt=""></div></div></li>
+          <li><div class="detail"><img src="images/pic.jpg" alt=""><div class="detail-title">9工商注册顾问:杨烁 <small> 丰台区小屯路 (85m²)</small></div><p class="detail-desc">昨天进的电视柜+酒柜，和茶几，强力国产板材，4600元。小米55寸的电视放上去，刚刚好，客厅一下子满了。现在纠结钟表摆放位置，如果放之前的蓝墙上，还是喜欢黑色表，但是装修师傅建议表不放在北墙，刚好那面蓝墙就是北墙。放在电视墙，也方便看时间，...</p></div><div class="show"><div class="pic"><img src="images/pic1.jpg" alt=""></div><div class="qr"><img src="images/qr.jpg" alt=""></div></div></li>
+          <li><div class="detail"><img src="images/pic.jpg" alt=""><div class="detail-title">10工商注册顾问:杨烁 <small> 丰台区小屯路 (85m²)</small></div><p class="detail-desc">昨天进的电视柜+酒柜，和茶几，强力国产板材，4600元。小米55寸的电视放上去，刚刚好，客厅一下子满了。现在纠结钟表摆放位置，如果放之前的蓝墙上，还是喜欢黑色表，但是装修师傅建议表不放在北墙，刚好那面蓝墙就是北墙。放在电视墙，也方便看时间，...</p></div><div class="show"><div class="pic"><img src="images/pic1.jpg" alt=""></div><div class="qr"><img src="images/qr.jpg" alt=""></div></div></li>
+          <li><div class="detail"><img src="images/pic.jpg" alt=""><div class="detail-title">11工商注册顾问:杨烁 <small> 丰台区小屯路 (85m²)</small></div><p class="detail-desc">昨天进的电视柜+酒柜，和茶几，强力国产板材，4600元。小米55寸的电视放上去，刚刚好，客厅一下子满了。现在纠结钟表摆放位置，如果放之前的蓝墙上，还是喜欢黑色表，但是装修师傅建议表不放在北墙，刚好那面蓝墙就是北墙。放在电视墙，也方便看时间，...</p></div><div class="show"><div class="pic"><img src="images/pic1.jpg" alt=""></div><div class="qr"><img src="images/qr.jpg" alt=""></div></div></li>
+          <li><div class="detail"><img src="images/pic.jpg" alt=""><div class="detail-title">12工商注册顾问:杨烁 <small> 丰台区小屯路 (85m²)</small></div><p class="detail-desc">昨天进的电视柜+酒柜，和茶几，强力国产板材，4600元。小米55寸的电视放上去，刚刚好，客厅一下子满了。现在纠结钟表摆放位置，如果放之前的蓝墙上，还是喜欢黑色表，但是装修师傅建议表不放在北墙，刚好那面蓝墙就是北墙。放在电视墙，也方便看时间，...</p></div><div class="show"><div class="pic"><img src="images/pic1.jpg" alt=""></div><div class="qr"><img src="images/qr.jpg" alt=""></div></div></li>
         </ul>
       </div>
       <div class="js-sDot">
@@ -222,13 +246,28 @@
     </div>
   </div>
   
+  	<div class="commonTitle"><h3><strong>了解记账本</strong></h3></div>
     <div class="design-topic">
-      <!-- <div class="design-info" data-index=0>
-        蓝色雅韵北欧两居0
+      <div class="design-info" data-index=0>
+        <h5>柔美温馨简约家居</h5>
+        <p>本案例空间采用了清新简洁的色调，搭配少量暖色调装饰品，时尚别致而不失清新活力。室内空间的动线、采光及公私区域划分都很合理，并涵盖了充足的储物空间，整体布局十分明亮大方，让空间看起来更加放松和舒适。利落的线条和精致的搭配让整个家散发着永不过时的魅力。</p>
+        <a href="">查看详情</a>
       </div>
       <div class="design-info" data-index=1>
-        蓝色雅韵北欧两居1
-      </div> -->
+        <h5>品味时代现代风房</h5>
+        <p>本案以现代手法微添美式元素，设计师在长型场域裡运用镜面拉阔宽幅，也作为开放空间的机能界定，另局部架高地板独立和室休閒区机能，不仅增添地板下收纳，也透过造型光带的烘托创造漂浮轻盈感，而滚过桌台立面处的马赛克腰带，也延伸到后方主卧房的床头主墙，增添精致度。</p>
+        <a href="">查看详情</a>
+      </div>
+      <div class="design-info" data-index=2>
+        <h5>清朗动人北欧风房</h5>
+        <p>清朗动人北欧风房清朗动人北欧风房清朗动人北欧风房清朗动人北欧风房清朗动人北欧风房清朗动人北欧风房清朗动人北欧风房清朗动人北欧风房</p>
+        <a href="">查看详情</a>
+      </div>
+      <div class="design-info" data-index=3>
+        <h5>品质休闲北欧宅</h5>
+        <p>清朗动人北欧风房清朗动人北欧风房清朗动人北欧风房清朗动人北欧风房清朗动人北欧风房清朗动人北欧风房清朗动人北欧风房清朗动人北欧风房</p>
+        <a href="">查看详情</a>
+      </div>
       <a href="javascript:void(0);" class="arrow-left">
           <span class="topic-arrow"></span>
       </a>
@@ -257,75 +296,59 @@
                   <img src="images/img4.jpg" alt="艺术北欧宅">
               </a>
           </div>
+      	</div>
       </div>
-
-
-    </div>
-
+    </div> <!-- design-topic end -->
 
 
   <div class="footer">
-    
+    <div class="serverItems">
+    	<h3 class="title">一站式服务平台</h3>
+    	<ul class="serverList">
+    		<li><i class="server-1"></i><h5>低价透明</h5><p>统一报价，无隐形消费</p></li>
+    		<li><i class="server-2"></i><h5>金牌服务</h5><p>一对一专属顾问24小时金牌服务</p></li>
+    		<li><i class="server-3"></i><h5>安全保障</h5><p>全程专人代理，个人信息安全有保障</p></li>
+    		<li><i class="server-4"></i><h5>售后无忧</h5><p>网上追踪，全程跟进</p></li>
+    	</ul>
+    </div>
+    <div class="Friend">
+    	<div class="w J_Friend">
+	    	<ul class="J_TabHd friendHd">
+	    		<li class="cur">友情链接</li>
+	    		<li>热门城市</li>
+	    		<li>附近城市</li>
+	    	</ul>
+	    	<div class="J_TabBd friendBd">
+	    		<div class="Items"><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a></div>
+	    		<div class="Items"><a href="">热门城市</a><a href="">热门城市</a><a href="">热门城市</a><a href="">热门城市</a><a href="">热门城市</a><a href="">热门城市</a><a href="">热门城市</a><a href="">热门城市</a><a href="">热门城市</a><a href="">热门城市</a></div>
+	    		<div class="Items"><a href="">附近城市</a><a href="">附近城市</a><a href="">附近城市</a><a href="">附近城市</a><a href="">附近城市</a><a href="">附近城市</a><a href="">附近城市</a><a href="">附近城市</a><a href="">附近城市</a><a href="">附近城市</a></div>
+	    	</div>
+    	</div>
+    </div>
+    <div class="Footer">
+    	<div class="w">
+	    	<ul class="FooterLink clearfix">
+          <li><a href="about.html">关于我们</a></li>
+          <li><a href="contact.html">联系我们</a></li>
+          <li><a href="">媒体报道</a></li>
+          <li><a href="help.html">帮助中心</a></li>
+          <li><a href="feedback.html">意见反馈</a></li>
+          <li><a href="recruit.html">高薪聘请</a></li>
+          <li><a href="law.html">法律声明</a></li>
+        </ul>
+	    	<p class="copyright">免责声明：本网站部分内容由用户自行上传，如权利人发先在误传其作品情形，请及时与本站联系。<br>
+	    	Copyright © 2015-2016  <a href="">京ICP备15042449号</a>    记账本版权所有</p>
+	    	<div class="qr">
+	    		<img src="images/qr.png" alt="">
+	    		<span>关注公众号</span>
+	    	</div>
+    	</div>
+    </div>
   </div> <!-- footer end -->
 
 <link href="https://cdn.bootcss.com/Swiper/2.7.6/idangerous.swiper.css" rel="stylesheet">
-<script src="https://cdn.bootcss.com/jquery/1.10.0/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/Swiper/2.7.6/idangerous.swiper.js"></script>
-  <script>
-$(function(){
-
-
-var t = new Swiper(".design-swiper", {
-    slidesPerView: "auto",
-    loop: !0,
-    loopedSlides: 2,
-    simulateTouch: !1,
-    offsetPxBefore: $(window).width() < 1440 ? 510 : 725,
-    onInit: function (t) {
-        t.swipeTo(3), e()
-}
-  
-    $(".index-banner .arrow-left").click(function () {
-      t.swipePrev()
-    })
-    $(".index-banner .arrow-right").click(function () {
-      t.swipeNext()
-    }), $(".slider-btns .swiper-pagination-switch").click(function () {
-      var e = $(".slider-btns .swiper-pagination-switch").index(this);
-                t.swipeTo(e, 1e3, !1)
-    })
-
-
-    })
-
-    /*$(window).resize(function () {
-        clearTimeout(t);
-        var t = setTimeout(function () {
-            e()
-        }, 0)
-    })*/
-  /*function e() {
-        var e = $(".design-topic .swiper-slide-active").data("index");
-        $(".design-topic").find(".design-info").hide(),
-        $(".design-topic").find(".design-info").each(function () {
-            if ($(this).data("index") == e) return void $(this).show()
-        })
-    }*/
-    /*function t() {
-        var e = $(window).width() < 1440 ? 50 : 62,
-            t = $(".design-swiper .swiper-wrapper").css("padding-left").split("px")[0] - e,
-            n = $(".design-topic .design-info").width(),
-            r = t + 10 + e;
-        $(".design-topic .arrow-left").css({
-            left: t - 10
-        }), $(".design-topic .arrow-right").css({
-            left: r
-        }), $(".design-topic .design-info").css({
-            left: r - n - 120
-        }), $(".design-swiper,.design-topic").show()
-    }
-    //e();*/
-  </script>
-  <!-- http://2.swiper.com.cn/api/function/2014/1218/108.html -->
+<script src="js/jquery.SuperSlide.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
