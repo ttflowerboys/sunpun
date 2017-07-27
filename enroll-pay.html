@@ -5,6 +5,8 @@
     <title>注册公司</title>
     <meta content="width=750,target-densitydpi=device-dpi" name="viewport">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.bootcss.com/jquery/1.10.0/jquery.min.js"></script>
+    <script src="js/common.js"></script>
 </head>
 <bady>
   <div id="wrap">
@@ -59,7 +61,7 @@
             <li>常见问题</li>
         </ul>
         <div class="J_TabBd bd">
-            <div class="items">
+            <div class="Items">
                 <div class="enrollItemsTitle">服务说明</div>
                 <dl class="enrollServerDl">
                     <dt><span>01.</span> 服务详情</dt>
@@ -76,11 +78,11 @@
                     <dd>服务完成后可获得一下材料：企业所得税备案表</dd>
                 </dl>
             </div> <!-- items end -->
-            <div class="items">
+            <div class="Items">
                 <div class="enrollItemsTitle">服务说明</div>
                 <div class="tac"><img src="images/serverstep.jpg" alt=""></div>
             </div> <!-- items end -->
-            <div class="items">
+            <div class="Items">
                 <div class="enrollItemsTitle">常见问题</div>
                 <dl class="questionList">
                     <dt>常见问题1常见问题1常见问题1</dt>
@@ -117,6 +119,10 @@
     </div> <!-- footer end -->
 
   </div>
-
+<script>
+    $(function(){
+        fn.Tab($('.enrollServer'));
+    })
+</script>
 </bady>
 </html>
