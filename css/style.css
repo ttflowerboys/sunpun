@@ -275,3 +275,31 @@ background-image: linear-gradient(to right, #157db7, #2ed3df);}
 .letter_search .letter_list a {display: inline-block;font-size: 18px;color: #666;width: 28px;height: 28px;line-height: 28px;text-align: center;overflow: hidden}
 .letter_search .letter_list a.se_cur {background: #64ccd2;color: #fff}
 
+/* entryList */
+.entryList{margin: 20px;overflow: hidden;}
+.entryList .items{overflow: hidden;margin-bottom: 44px;}
+
+.entryList .aside{width: 260px;height: 372px;margin-right: 10px;padding-top: 240px;background-image: url(../images/entry.png);background-repeat: no-repeat;background-size: auto 372px;float: left;overflow: hidden;}
+.entryList .aside h5{font-weight: bold;font-size: 28px;line-height: 32px;margin-bottom: 10px;color: #fff;text-align: center;}
+.entryList .aside p{font-size: 16px;line-height: 18px;color: #fff;text-align: center;}
+.entryList .aside a{width: 144px;height: 40px;line-height: 40px;font-size: 20px;text-align: center;color: #000;margin: 14px auto;display: block;}
+.entryList .nLi-1 .aside{background-color: #84bee8;background-position: 0px 0;}
+.entryList .nLi-2 .aside{background-color: #a7c989;background-position: -260px 0;}
+.entryList .nLi-3 .aside{background-color: #af9cdf;background-position: -520px 0;}
+.entryList .nLi-4 .aside{background-color: #e6c274;background-position: -780px 0;}
+.entryList .nLi-5 .aside{background-color: #f2a373;background-position: -1040px 0;}
+.entryList .nLi-6 .aside{background-color: #71ccd0;background-position: -1300px 0;}
+
+.entryList .main{width: 428px;float: right;}
+.entryList .head{height: 64px;padding: 5px 0 16px;margin-bottom: 32px;border-bottom: 1px solid #e5e5e5;}
+.entryList .head h3{font-weight: bold;font-size: 28px;float: left;}
+.entryList .head a{width: 144px;height: 40px;font-size: 20px;line-height: 40px;float: right;}
+
+.entryList .link{height: 126px;margin-bottom: 18px;line-height: 36px;font-size: 0;overflow: hidden;}
+.entryList .link a{font-size: 16px;width: 86px;white-space: nowrap;margin-right: 22px;color: #000;display: inline-block;}
+.entryList .link a:nth-child(4n){margin-right: 0;}
+.entryList .link a:hover{color: #3cd6e1;}
+
+.adList{height: 130px;margin-left: -12px;overflow: hidden;}
+.adList li{width: 212px;height: 130px;margin-left: 8px;overflow: hidden;float: left;}
+.adList li img{width: 100%;height: 100%;}
