@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>城市切换</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.bootcss.com/jquery/1.10.0/jquery.min.js"></script>
+  <script src="js/common.js"></script>
+</head>
+<body>
+  <div class="top">
+    <div class="w clearfix">
+      <div class="topLeft">
+        <i class="icon-address"></i><label class="current_city">北京</label><a href="selectCity.html" rel="nofollow">[ 切换 ]</a>
+      </div>
+    </div>
+  </div><!-- top end -->
+  <div class="header w">
+    <h1 class="logo"><a href="">记帐本</a></h1>
+    <ul class="nav">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="">注册公司</a></li>
+      <li><a href="">代理记账</a></li>
+      <li><a href="">人事担保</a></li>
+      <li><a href="">商标组册</a></li>
+      <li><a href="">网站建设</a></li>
+      <li><a href="">网站优化</a></li>
+      <li><a href="news.html">新闻动态</a></li>
+    </ul>
+    <div class="search">
+      <form action="">
+        <input type="text" class="search-text" placeholder="搜一搜发现更多">
+        <input type="submit" class="search-btn" value="">
+      </form>
+    </div>
+  </div> <!-- header end -->
+  
+
+  <div class="choose_city">
+    <!--热门城市-->
+    <div class="rmcs" id="Div1">
+        <div class="title_type1">热门城市</div>
+        <div class="xzcs_dt">
+            <span><a href="">北京</a></span> <span><a href="">上海</a></span> <span><a href="">广州</a></span> <span><a href="">深圳</a></span> <span><a href="">南京</a></span> <span><a href="">苏州</a></span> <span><a href="">杭州</a></span>
+            <div class="rm_gkt">共开通了<i>250</i>个城市站</div>
+        </div>
+    </div>
+    <!--快速查找-->
+    <div class="rm_cz">
+        <strong class="title_type1">快速查找</strong>
+        <select name="shen" id="shen" onchange="changeShen(this,'city')">
+            <option value="14">A 安徽</option>
+            <option value="0">B 北京</option>
+            <option value="7">C 重庆</option>
+            <option value="17">F 福建</option>
+            <option value="27">G 甘肃</option>
+            <option value="2">G 广东</option>
+            <option value="21">G 广西</option>
+            <option value="24">G 贵州</option>
+            <option value="18">H 海南</option>
+            <option value="5">H 河南</option>
+            <option value="13">H 河北</option>
+            <option value="16">H 湖南</option>
+            <option value="9">H 湖北</option>
+            <option value="20">H 黑龙江</option>
+            <option value="6">J 江苏</option>
+            <option value="19">J 江西</option>
+            <option value="22">J 吉林</option>
+            <option value="15">L 辽宁</option>
+            <option value="25">N 内蒙古</option>
+            <option value="29">Q 青海</option>
+            <option value="1">S 上海</option>
+            <option value="8">S 陕西</option>
+            <option value="10">S 四川</option>
+            <option value="12">S 山东</option>
+            <option value="23">S 山西</option>
+            <option value="3">T 天津</option>
+            <option value="26">X 新疆</option>
+            <option value="11">Y 云南</option>
+            <option value="4">Z 浙江</option>
+        </select>
+        <select onchange="changeCity()" id="city" name="city">
+            <option value="0">合肥</option>
+            <option value="1">芜湖</option>
+        </select>
+        <input type="hidden" name="hidden_tcode" id="hidden1" />
+        <input type="submit" class="smt" value="进入" onclick="goto_index_fz()" />
+    </div>
+    <!--拼音查找城市-->
+    <div class="letter_search">
+        <strong class="title_type2">按拼音首字母选择</strong>
+        <div class="letter_list" id="letter_list">
+            <a href="javascript:;">A</a><a href="javascript:;">B</a><a href="javascript:;">C</a><a href="javascript:;">D</a><a href="javascript:;">E</a><a href="javascript:;">F</a><a href="javascript:;">G</a><a href="javascript:;">H</a><a href="javascript:;">J</a><a href="javascript:;">K</a><a href="javascript:;">L</a><a href="javascript:;">M</a><a href="javascript:;">N</a><a href="javascript:;">O</a><a href="javascript:;">P</a><a href="javascript:;">Q</a><a href="javascript:;">R</a><a href="javascript:;">S</a><a href="javascript:;">T</a><a href="javascript:;">W</a><a href="javascript:;">X</a><a href="javascript:;">Y</a><a href="javascript:;">Z</a>
+        </div>
+    </div>
+    <div id="city_box">
+        <!--华北-->
+        <div class="cs_zs">
+            <div class="title_type2">华北地区</div>
+            <div class="xzcs_dt"><a href="">北京</a><a href="">天津</a><a href="">沈阳</a><a href="">大连</a><a href="">石家庄</a><a href="">唐山</a><a href="">廊坊</a><a href="">鞍山</a><a href="">大庆</a><a href="">哈尔滨</a><a href="">长春</a><a href="">秦皇岛</a><a href="">乌兰察布</a><a href="">铁岭</a><a href="">保定</a><a href="">张家口</a><a href="">邯郸</a><a href="">沧州</a><a href="">吉林</a><a href="">锦州</a><a href="">邢台</a><a href="">朝阳</a><a href="">牡丹江</a><a href="">锡林郭勒盟</a></div>            </div>
+        <!--华东-->
+        <div class="cs_zs">
+            <div class="title_type2">华东地区</div>
+            <div class="xzcs_dt"><a href="">上海</a><a href="">南京</a><a href="">杭州</a><a href="">福州</a><a href="">苏州</a><a href="">常熟</a><a href="">济南</a><a href="">无锡</a><a href="">青岛</a><a href="">宁波</a><a href="">温州</a><a href="">义乌</a><a href="">潍坊</a><a href="">济宁</a><a href="">烟台</a><a href="">南通</a><a href="">常州</a><a href="">徐州</a><a href="">台州</a><a href="">嘉兴</a><a href="">金华</a><a href="">泉州</a><a href="">南昌</a><a href="">赣州</a><a href="">连云港</a><a href="">昆山</a><a href="">宿迁</a><a href="">扬州</a><a href="">镇江</a><a href="">淮安</a><a href="">衢州</a><a href="">湖州</a><a href="">舟山</a><a href="">绍兴</a><a href="">芜湖</a><a href="">九江</a><a href="">盐城</a><a href="">宿州</a><a href="">黄山</a><a href="">江阴</a><a href="">漳州</a><a href="">淄博</a><a href="">临沂</a><a href="">安庆</a><a href="">泰州</a><a href="">菏泽</a><a href="">枣庄</a><a href="">丽水</a><a href="">鹰潭</a><a href="">威海</a><a href="">东营</a><a href="">莆田</a><a href="">龙岩</a><a href="">宜春</a><a href="">滨州</a><a href="">聊城</a><a href="">泰安</a><a href="">抚州</a><a href="">吉安</a><a href="">景德镇</a></div>
+        </div>
+        <!--华南地区-->
+        <div class="cs_zs">
+            <div class="title_type2">华南地区</div>
+            <div class="xzcs_dt"><a href="">广州</a><a href="">深圳</a><a href="">东莞</a><a href="">佛山</a><a href="">惠州</a><a href="">三亚</a><a href="">中山</a><a href="">珠海</a><a href="">汕头</a><a href="">清远</a><a href="">江门</a><a href="">肇庆</a><a href="">南宁</a><a href="">柳州</a><a href="">厦门</a><a href="">海口</a><a href="">北海</a><a href="">桂林</a><a href="">阳江</a><a href="">毕节</a><a href="">宁德</a><a href="">河源</a><a href="">云浮</a><a href="">湛江</a><a href="">韶关</a><a href="">百色</a><a href="">茂名</a><a href="">揭阳</a><a href="">防城港</a><a href="">贵港</a><a href="">梧州</a><a href="">玉林</a><a href="">河池</a><a href="">琼海</a><a href="">南平</a></div>
+        </div>
+        <!--中西部地区-->
+        <div class="cs_zs">
+            <div class="title_type2">中西部地区</div>
+            <div class="xzcs_dt"><a href="">重庆</a><a href="">西安</a><a href="">武汉</a><a href="">成都</a><a href="">昆明</a><a href="">合肥</a><a href="">兰州</a><a href="">太原</a><a href="">贵阳</a><a href="">长沙</a><a href="">呼和浩特</a><a href="">乌鲁木齐</a><a href="">郑州</a><a href="">银川</a><a href="">包头</a><a href="">南阳</a><a href="">洛阳</a><a href="">焦作</a><a href="">泸州</a><a href="">自贡</a><a href="">德阳</a><a href="">绵阳</a><a href="">榆林</a><a href="">宜昌</a><a href="">咸阳</a><a href="">凯里</a><a href="">株洲</a><a href="">开封</a><a href="">信阳</a><a href="">遵义</a><a href="">十堰</a><a href="">襄阳</a><a href="">湘潭</a><a href="">岳阳</a><a href="">衡阳</a><a href="">滁州</a><a href="">新乡</a><a href="">淮南</a><a href="">六盘水</a><a href="">汉中</a><a href="">曲靖</a><a href="">阜阳</a><a href="">六安</a><a href="">蚌埠</a><a href="">常德</a><a href="">西宁</a><a href="">眉山</a><a href="">黄石</a><a href="">宝鸡</a><a href="">铜仁</a><a href="">普洱</a><a href="">保山</a><a href="">孝感</a><a href="">大同</a><a href="">益阳</a><a href="">郴州</a><a href="">怀化</a><a href="">娄底</a><a href="">邵阳</a><a href="">张家界</a><a href="">咸宁</a><a href="">三门峡</a><a href="">黄冈</a><a href="">周口</a><a href="">商丘</a><a href="">南充</a><a href="">平顶山</a><a href="">赤峰</a><a href="">宜宾</a><a href="">晋中</a><a href="">遂宁</a><a href="">濮阳</a><a href="">马鞍山</a><a href="">许昌</a><a href="">亳州</a><a href="">运城</a><a href="">驻马店</a><a href="">荆州</a><a href="">玉溪</a><a href="">乐山</a><a href="">长治</a><a href="">安顺</a><a href="">内江</a><a href="">陇南</a><a href="">渭南</a><a href="">达州</a><a href="">安康</a><a href="">鄂州</a><a href="">漯河</a><a href="">大理</a><a href="">楚雄</a><a href="">呼伦贝尔</a><a href="">西双版纳</a></div>
+        </div>
+    </div>
+  </div>
+
+
+<div class="w">
+
+  <ul class="entryList">
+  	<div class="items nLi-1">
+  		<div class="aside">
+  			<h5>工商服务</h5>
+  			<p>提交材料，为您快速注册公司</p>
+  			<a href="">立即进入</a>
+  		</div>
+      <div class="main">
+        <div class="head">
+          <h3>工商服务</h3>
+          <a href="">立即咨询</a>
+        </div>
+        <div class="link">
+          <a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a>
+        </div>
+        <ul class="adList">
+          <li><a href=""><img src="images/ad1.jpg" alt=""></a></li>
+          <li><a href=""><img src="images/ad2.jpg" alt=""></a></li>
+        </ul>
+      </div>
+  	</div>
+  	<div class="items nLi-2">
+  		<div class="aside"><h5>财税服务</h5><p>提交材料，为您快速注册公司</p><a href="">立即进入</a></div>
+      <div class="main">
+        <div class="head"><h3>财税服务</h3><a href="">立即咨询</a></div>
+        <div class="link"><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a></div>
+        <ul class="adList"><li><a href=""><img src="images/ad1.jpg" alt=""></a></li><li><a href=""><img src="images/ad2.jpg" alt=""></a></li></ul>
+      </div>
+  	</div>
+  	<div class="items nLi-3">
+  		<div class="aside"><h5>人事社保</h5><p>提交材料，为您快速注册公司</p><a href="">立即进入</a></div>
+      <div class="main">
+        <div class="head"><h3>人事社保</h3><a href="">立即咨询</a></div>
+        <div class="link"><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a></div>
+        <ul class="adList"><li><a href=""><img src="images/ad1.jpg" alt=""></a></li><li><a href=""><img src="images/ad2.jpg" alt=""></a></li></ul>
+      </div>
+  	</div>
+  	<div class="items nLi-4">
+  		<div class="aside"><h5>商标注册</h5><p>提交材料，为您快速注册公司</p><a href="">立即进入</a></div>
+      <div class="main">
+        <div class="head"><h3>商标注册</h3><a href="">立即咨询</a></div>
+        <div class="link"><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a></div>
+        <ul class="adList"><li><a href=""><img src="images/ad1.jpg" alt=""></a></li><li><a href=""><img src="images/ad2.jpg" alt=""></a></li></ul>
+      </div>
+  	</div>
+  	<div class="items nLi-5">
+  		<div class="aside"><h5>网站建设</h5><p>提交材料，为您快速注册公司</p><a href="">立即进入</a></div>
+      <div class="main">
+        <div class="head"><h3>网站建设</h3><a href="">立即咨询</a></div>
+        <div class="link"><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a></div>
+        <ul class="adList"><li><a href=""><img src="images/ad1.jpg" alt=""></a></li><li><a href=""><img src="images/ad2.jpg" alt=""></a></li></ul>
+      </div>
+  	</div>
+  	<div class="items nLi-6">
+  		<div class="aside"><h5>网站优化</h5><p>提交材料，为您快速注册公司</p><a href="">立即进入</a></div>
+      <div class="main">
+        <div class="head"><h3>网站优化</h3><a href="">立即咨询</a></div>
+        <div class="link"><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a><a href="">超级链接</a></div>
+        <ul class="adList"><li><a href=""><img src="images/ad1.jpg" alt=""></a></li><li><a href=""><img src="images/ad2.jpg" alt=""></a></li></ul>
+      </div>
+  	</div>
+  </ul>
+
+  <ul class="strategyList clearfix">
+    <li>
+      <h3 class="title">新闻动态</h3>
+      <i class="icon-book"></i>
+      <div class="desc">
+        攻略标题攻略标题攻略标题<br>攻略标题攻略标题攻略标题<br>攻略标题攻略标题攻略标题<br>攻略标题攻略标题攻略标题<br>攻略标题攻略标题攻略标题<br><br>攻略标题攻略标题攻略标题<br>攻略标题攻略标题攻略标题
+      </div>
+    </li>
+    <li><h3 class="title">注册公司攻略</h3>
+      <i class="icon-file"></i>
+      <div class="desc">攻略标题攻略标题攻略标题<br>攻略标题攻略标题攻略标题<br>攻略标题攻略标题攻略标题<br>攻略标题攻略标题攻略标题<br>攻略标题攻略标题攻略标题<br><br>攻略标题攻略标题攻略标题<br>攻略标题攻略标题攻略标题</div></li>
+    <li><h3 class="title">代理记账攻略</h3>
+      <i class="icon-edit"></i>
+      <div class="desc">攻略标题攻略标题攻略标题<br>攻略标题攻略标题攻略标题<br>攻略标题攻略标题攻略标题<br>攻略标题攻略标题攻略标题<br>攻略标题攻略标题攻略标题<br><br>攻略标题攻略标题攻略标题<br>攻略标题攻略标题攻略标题</div></li>
+  </ul>
+</div>
+
+  <div class="footer">
+    <div class="serverItems">
+    	<h3 class="title">一站式服务平台</h3>
+    	<ul class="serverList">
+    		<li><i class="server-1"></i><h5>低价透明</h5><p>统一报价，无隐形消费</p></li>
+    		<li><i class="server-2"></i><h5>金牌服务</h5><p>一对一专属顾问24小时金牌服务</p></li>
+    		<li><i class="server-3"></i><h5>安全保障</h5><p>全程专人代理，个人信息安全有保障</p></li>
+    		<li><i class="server-4"></i><h5>售后无忧</h5><p>网上追踪，全程跟进</p></li>
+    	</ul>
+    </div>
+    <div class="Friend">
+    	<div class="w J_Friend">
+	    	<ul class="J_TabHd friendHd">
+	    		<li class="cur">友情链接</li>
+	    		<li>热门城市</li>
+	    		<li>附近城市</li>
+	    	</ul>
+	    	<div class="J_TabBd friendBd">
+	    		<div class="Items"><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a><a href="">友情链接</a></div>
+	    		<div class="Items"><a href="">热门城市</a><a href="">热门城市</a><a href="">热门城市</a><a href="">热门城市</a><a href="">热门城市</a><a href="">热门城市</a><a href="">热门城市</a><a href="">热门城市</a><a href="">热门城市</a><a href="">热门城市</a></div>
+	    		<div class="Items"><a href="">附近城市</a><a href="">附近城市</a><a href="">附近城市</a><a href="">附近城市</a><a href="">附近城市</a><a href="">附近城市</a><a href="">附近城市</a><a href="">附近城市</a><a href="">附近城市</a><a href="">附近城市</a></div>
+	    	</div>
+    	</div>
+    </div>
+    <div class="Footer">
+    	<div class="w">
+	    	<ul class="FooterLink clearfix">
+	    		<li><a href="about.html">关于我们</a></li>
+          <li><a href="contact.html">联系我们</a></li>
+          <li><a href="">媒体报道</a></li>
+          <li><a href="help.html">帮助中心</a></li>
+          <li><a href="feedback.html">意见反馈</a></li>
+          <li><a href="recruit.html">高薪聘请</a></li>
+          <li><a href="law.html">法律声明</a></li>
+	    	</ul>
+	    	<p class="copyright">免责声明：本网站部分内容由用户自行上传，如权利人发先在误传其作品情形，请及时与本站联系。<br>
+	    	Copyright © 2015-2016  <a href="">京ICP备15042449号</a>    记账本版权所有</p>
+	    	<div class="qr">
+	    		<img src="images/qr.png" alt="">
+	    		<span>关注公众号</span>
+	    	</div>
+    	</div>
+    </div>
+  </div> <!-- footer end -->
+
+<script src="js/nationwide_index.js"></script>
+<script>
+SearchCity({
+	letters: document.getElementById('letter_list').getElementsByTagName('a'),
+	citys: document.getElementById('city_box').getElementsByTagName('a')
+}).click();
+</script>
+  
+</body>
+</html>
