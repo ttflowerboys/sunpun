@@ -361,3 +361,27 @@ background-image: linear-gradient(to right, #157db7, #2ed3df);}
 .typeCardList .round span{color: #3cd6e1;font-size: 18px;}
 .typeCardList .info p{font-size: 16px;height: 22px;line-height: 22px;margin-bottom: 24px;color: #999;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 .typeCardList .info .basicBtn{width: 136px;height: 40px;font-size: 16px;line-height: 40px;}
+
+/* hrCardList */
+.hrCardList,.hrDefaultList{overflow: hidden;margin: 0 10px;text-align: center;}
+.hrDefaultList li,
+.hrCardList li{padding-top: 50px;border: 2px solid #f0f7f9;margin-left: 8px;margin-bottom: 8px;text-align: center;background: #fff;float: left;transition : all 0.2s linear 0s;}
+.hrDefaultList li:first-child,.hrCardList li:first-child{margin-left: 0;}
+.hrDefaultList li h5,.hrCardList li h5{font-size: 26px;font-weight: bold;line-height: 30px;margin-bottom: 8px;color: #0b3545;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.hrDefaultList li p,.hrCardList li p{font-size: 16px;margin-bottom: 20px;color: #999;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+
+.hrCardList li{width: 238px;height: 226px;}
+.hrCardList li i{width: 42px;height: 38px;display: block;margin: 0 auto 28px;transition : all 0.2s linear 0s;}
+.hrCardList li a{width: 132px;height: 36px;line-height: 36px;display: none;margin: 0 auto;clear: both;transition : all 0.2s linear 0s;}
+.hrCardList li:hover{padding-top: 28px;height: 216px;border-color: #3cd6e1;border-radius: 3px;}
+.hrCardList li:hover i{margin-bottom: 20px;}
+.hrCardList li:hover p{margin-bottom: 10px;}
+.hrCardList li:hover a{display: block;}
+/* hrDefaultList */
+.hrDefaultList li{width: 176px;height: 136px;padding-top: 38px;}
+.hrDefaultList li h5{margin-bottom: 15px;font-size: 18px}
+.hrDefaultList li:hover{border-color: #3cd6e1;border-radius: 3px;}
+.icon-sb{background: url('../images/hr-1.png') center no-repeat;}
+.icon-gjj{background: url('../images/hr-2.png') center no-repeat;}
+.icon-bank{background: url('../images/hr-3.png') center no-repeat;}
+
