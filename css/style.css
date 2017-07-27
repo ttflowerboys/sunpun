@@ -145,3 +145,56 @@ background-image: linear-gradient(to right, #157db7, #2ed3df);}
 .enrollList .price{font-size: 28px;color: #64ccd2;line-height: 36px;margin-right: 24px;display: inline-block;vertical-align: middle;}
 .enrollList .read{line-height: 36px;font-size: 16px;padding: 0 25px;}
 
+/* enrollBuy */
+.enrollBuy{position: relative;margin-bottom: 54px;}
+.enrollBuy .pic{width: 100%;overflow: hidden;}
+.enrollBuy .pic img{width: 100%;height: 100%;}
+.enrollBuy .title{font-weight: bold;font-size: 28px;line-height: 32px;margin-bottom: 12px; color: #333;}
+.enrollBuy .desc{font-size: 20px;line-height: 24px;margin-bottom: 20px;color: #a7a7a7;}
+.enrollBuy .price{height: 100px;line-height: 80px;font-size: 20px;padding: 10px 16px;background: #f5f5f5;color: #999;}
+.enrollBuy .price span{font-size: 18px;margin-right: 5px;color: #ed0707;}
+.enrollBuy .buyDl{margin-top: 16px;color: #adadad;font-size: 22px;}
+.enrollBuy .buyDl dt{width: 105px;height: 52px;font-size: 22px;line-height: 52px;float: left;}
+.enrollBuy .buyDl .buy-input{width: 342px;height: 52px;font-size: 22px;padding: 5px;border: 1px solid #e5e5e5;color: #adadad;vertical-align: middle;}
+.enrollBuy .buyDl .buy-input:focus{border-color: #64ccd2;}
+.enrollBuy .buyGroup .buy-input{width: 60px;text-align: center;}
+.enrollBuy .actionBtn{height: 52px;width: 36px;border: 1px solid #e5e5e5;font-size: 24px;text-align: center;cursor: pointer;vertical-align: middle;background: #fff;color: #bbb;}
+.enrollBuy .actionBtn:first-child{border-right: 0;}
+.enrollBuy .actionBtn:last-child{border-left: 0;}
+.enrollBuy .actionBtn:hover{background: #f2f2f1;color: #333;}
+.enrollBuy .buyGo{margin-top: 36px;}
+.enrollBuy .buy-submit{font-size: 26px;height: 64px;line-height: 64px;padding: 0 60px;margin-right: 30px;color: #fff;cursor: pointer;background: #f2f2f2;text-align: center;display: inline-block;}
+.enrollBuy .buy-submit-red{background: #e62b00;}
+.enrollBuy .buy-submit-green{background: #64ccd2;}
+
+/* enrollRel */
+.enrollRel{margin-bottom: 52px;background: #fff;border: 1px solid #e5e5e5;}
+.enrollRel .hd{height: 46px;padding: 0 26px;font-size: 16px;line-height: 46px;border-bottom: 1px solid #e5e5e5;color: #333;background: #f5f5f5;}
+.enrollRel .bd{padding: 26px 25px;background: #fff;}
+.enrollRelList{margin-left: -10px;overflow: hidden;}
+.enrollRelList li{width: 226px;height: 167px;margin-left: 10px;background: #ccc;float: left;overflow: hidden;}
+.enrollRelList li img{width: 100%;height: 100%;}
+
+/* enrollServer */
+.enrollServer{border: 1px solid #e5e5e5;background: #fff;}
+.enrollServer img{width: 100%;}
+.enrollServer .hd{height: 46px;background: #f5f5f5;}
+.enrollServer .bd{padding: 48px 26px;background: #fff;}
+
+.enrollServer .hd li{height: 44px;font-size: 20px;line-height: 44px;padding: 0 32px;border-top: 2px solid transparent;cursor: pointer;float: left;color: #333;text-align: center;}
+.enrollServer .hd li.cur{background: #fff;border-color: #64ccd2;height: 46px;}
+
+.enrollItemsTitle{margin-bottom: 32px;font-weight: bold;font-size: 20px;line-height: 24px;color: #333;}
+
+.enrollServerDl{}
+.enrollServerDl dt{font-size: 24px;line-height: 32px;margin-bottom: 24px;}
+.enrollServerDl dt span{font-size: 24px;}
+.enrollServerDl dd{font-size: 20px;line-height: 32px;margin-bottom: 82px;color: #333;}
+.enrollServerDl .details{background: #eee;overflow: hidden;}
+.enrollServerDl .details img{width: 100%;}
+.enrollServerDl .details .text{width: 714px;padding: 38px;float: right;font-size: 14px;color: #b5b5b5;}
+
+/* questionList */
+.questionList{border: 1px solid #e5e5e5;background: #fff;}
+.questionList dt{font-size: 20px;padding: 12px 20px;color: #3f3f3f;background: #e5e5e5;}
+.questionList dd{font-size: 18px;padding: 26px 22px;color: #a0a0a0;}
