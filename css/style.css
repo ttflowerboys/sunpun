@@ -66,3 +66,29 @@ background-image: linear-gradient(to right, #157db7, #2ed3df);}
 
 .breadCrumb{font-size: 18px;line-height: 26px;color: #999;margin-bottom: 32px;}
 .breadCrumb a{color: #999;}
+
+/* PageSide */
+.PageSide{width: 180px;padding: 16px;border-radius: 3px; box-shadow: 0 0 10px rgba(11,11,11,.5);background: #fafafa;float: left;}
+.PageSide li{height: 80px;font-size: 22px;line-height: 80px;white-space: normal;text-align: center;border-bottom: 1px solid #dcdcdc;overflow: hidden;text-overflow: ellipsis;}
+.PageSide li:last-child{border-bottom: 0;}
+.PageSide li.cur{border-bottom: 2px solid #64ccd2;}
+.PageSide li a{color: #333;display: block;}
+.PageSide li a:hover,.PageSide li.cur a{color: #64ccd2;}
+
+.PageMain{
+  width: 482px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #414141;
+  float: right;
+}
+.PageMain img{max-width: 100%;}
+.PageMainHd{height: 32px;font-weight: bold;font-size: 22px;line-height: 32px;margin-bottom: 38px;padding-left: 12px;color: #64ccd2;border-left: 2px solid #64ccd2;}
+
+
+/* recruit */
+.recruit{}
+.recruit .items{margin-bottom: 54px;}
+.recruit h5{font-size: 18px;font-weight: bold;margin-bottom: 3px;color: #000;margin-bottom: 28px;}
+
+
