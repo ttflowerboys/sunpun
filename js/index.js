@@ -54,6 +54,7 @@ $(function(){
     
 
     $('.banner').slide({autoPlay:!0})
+    $('.indexVideo').slide({autoPage:!1,titCell:".js-sDot li"})
     $('.indexTeam').slide({titCell:".js-sDot li",autoPage:!1,trigger:"click"})
     
 })
