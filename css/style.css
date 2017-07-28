@@ -387,6 +387,7 @@ background-image: linear-gradient(to right, #157db7, #2ed3df);}
 
 /* enrollServer */
 .enrollServer{border: 1px solid #e5e5e5;background: #fff;}
+.enrollServer .Items{display: none;}
 .enrollServer .hd{height: 46px;background: #f5f5f5;}
 .enrollServer .bd{padding: 48px;background: #fff;}
 
