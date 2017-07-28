@@ -1,4 +1,4 @@
-html, body, h1, h2, h3,h4,h5,h6, p, span, a, div, ol, ul, li, dl, dt, dd, table, tbody, tfoot, thead, tr, th, td, input, textarea, form {margin: 0;padding: 0;font-family:'Microsoft Yahei',Arial,Verdana,Helvetica,sans-serif;-webkit-tap-highlight-color: rgba(0,0,0,0);box-sizing: border-box;}
+html, body, h1, h2, h3,h4,h5,h6, p, span, strong, b, a, div, ol, ul, li, dl, dt, dd, table, tbody, tfoot, thead, tr, th, td, input, textarea, form {margin: 0;padding: 0;font-family:'Microsoft Yahei',Arial,Verdana,Helvetica,sans-serif;-webkit-tap-highlight-color: rgba(0,0,0,0);box-sizing: border-box;font-size: 18px;}
 ul,li{list-style: none;}
 input{border: 0}
 img{border: 0;vertical-align: top;}
@@ -8,7 +8,7 @@ input, textarea, keygen, select, button {margin: 0em;border:0;font: -webkit-smal
 input, textarea {outline: 0;}
 article, aside, footer, header, hgroup, main, nav, section {display: block;}
 body{height: auto;width: 750px;margin: 0 auto;background: #ccc;}
-#wrap{position: relative;width: 100%;font-size: 14px;background: #fff;}
+#wrap{position: relative;width: 100%;font-size: 18px;background: #fff;}
 .p20{padding: 20px;}
 .basicBtn{text-align: center;border-radius: 5px;color: #fff;box-shadow: -5px 4px 10px rgba(11, 11, 11, 0.16);background: #3cd6e1;display: inline-block;}
 /* common style */
@@ -60,7 +60,7 @@ background-image: linear-gradient(to right, #157db7, #2ed3df);}
 .FooterLink{font-size: 0;}
 .FooterLink a{margin-right: 24px;font-size: 20px;color: #404040;display: inline-block;white-space: nowrap;}
 .FooterLink a:last-child{margin-right: 0;}
-.copyright{padding: 30px 0 10px;font-size: 20px;line-height: 26px;color: #999;}
+.copyright{padding: 30px 0 10px;font-size: 14px;line-height: 26px;color: #999;}
 
 .Page{padding: 48px 28px 76px;background: #fff;overflow: hidden;}
 .Page img{max-width: 100%;}
@@ -312,10 +312,10 @@ background-image: linear-gradient(to right, #157db7, #2ed3df);}
 
 
 /* commonTitle */
-.commonTitle{text-align: center;padding: 94px 0 72px;}
+.commonTitle{text-align: center;padding: 94px 10px 72px;}
 .commonTitle h3{font-size: 28px;font-weight: bold;color: #15495a;}
-.commonTitle h3 strong{line-height: 48px;padding-bottom: 6px;border-bottom: 2px solid #31cad6;display: inline-block;}
-.commonTitle p{margin-top: 18px;font-size: 24px;line-height: 22px;color: #999;}
+.commonTitle h3 strong{font-size: 28px;line-height: 48px;padding-bottom: 6px;border-bottom: 2px solid #31cad6;display: inline-block;}
+.commonTitle p{margin-top: 18px;font-size: 14px;line-height: 22px;color: #999;}
 
 /* cateList */
 .cateList{text-align: center;font-size: 0;margin-bottom: 74px;}
