@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>呼叫清单</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/user.css" />
+    <link rel="stylesheet" type="text/css" href="../css/myfont/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <script>
+        document.getElementsByTagName('html')[0].style.fontSize = (document.documentElement.clientWidth < 750) ? (document.documentElement.clientWidth /7.50 + "px") : "100px";
+    </script>
+</head>
+
+<body >
+  <div id="wrap" class="">
+   <div class="header-box">
+     <div class="common-header icon-go"><span>呼叫清单</span></div>
+   </div>
+   <!--  筛选条件 开始-->
+  <div class="tellist-box">
+   <div class="select-box flex-box">
+      <span class="flex-item  select-name active"><i class="icon-like"></i><i>用户意向</i><i class="icon-triangle"></i></span>
+      <span class="flex-item  select-name"><i class="icon-selecte"></i> <i class="name">筛选</i><i class="icon-triangle"></i></span>
+      <span class="flex-item  select-item"><i class="icon-order"></i><i>时间排序</i><i class="icon-triangle"></i></span>
+   </div>
+   <div class="option-box flex-box ">
+       <ul  class="flex-item value ">
+         <li class="active"><span>不限</span></li>
+         <li><span>近1周</span></li>
+         <li><span>近1月</span></li>
+         <li><span>近3月</span></li>
+       </ul>
+   </div>
+ </div>
+   <div class="option-box flex-box hidden ">
+       <ul class="flex-item option-name">
+         <li class="active">用户意向</li>
+         <li >时间</li>
+         <li></li>
+       </ul>
+       <ul  class="flex-item value">
+         <li  class="no-border" ><span>无意向</span></li>
+         <li class="active"><span>有意向</span></li>
+         <li><span>观察</span></li>
+       </ul>
+   </div>
+ </div>
+  <!--  筛选条件 结束-->
+  </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/tools.js"></script>
+<script type="text/javascript" src="../script/sessions.js"></script>
+<script type="text/javascript" src="../script/route.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+      //状态栏字体为白色，适用于深色背景
+      var header = $api.dom(".header-box"); //$api.byId('header');
+      //适配iOS7+，Android4.4+状态栏沉浸式效果，详见config文档statusBarAppearance字段
+      $api.fixStatusBar(header);
+      api.setStatusBarStyle({
+          style: 'light'
+      });
+       //计算frm的开始高度
+      var frmY=$api.offset(header).h;
+       //加载列表
+       openList(frmY);
+//点击返回按钮
+       $api.addEvt($api.dom(".icon-go"), 'click',function(){
+          api.closeWin();
+       });
+    };
+
+function openList(frmY){
+   api.openFrame({
+       name: 'frm-tellist',
+       url: 'frm-tellist.html',
+       rect: {
+           x: 0,
+           y:frmY,
+           w: 'auto',
+           h: 'auto'
+       },
+       pageParam: {
+           name: 'test'
+       },
+       bounces: true,
+       bgColor: 'rgba(0,0,0,0)',
+       vScrollBarEnabled: true,
+       hScrollBarEnabled: true
+   });
+
+}
+
+</script>
+
+</html>

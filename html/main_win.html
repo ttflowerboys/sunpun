@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+	<meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+	<title>home</title>
+	<link rel="stylesheet" type="text/css" href="../css/api.css" />
+	<link rel="stylesheet" type="text/css" href="../css/callOut.css" />
+	<style>
+		.analysis_title{
+
+		}
+		.waper_s{
+			height:0.6rem;
+			padding:0.14rem 0.3rem;
+			display:flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			font-size:0.36rem;
+			color:#fff;
+		}
+		.waper_s span.back{
+			width:0.22rem;
+			height:0.22rem;
+			/*border-right:2px solid #fff;*/
+			/*border-bottom:2px solid #fff;*/
+			/*transform: rotate(135deg);*/
+		}
+		.waper_s span.button {
+			width: 0.38rem;
+			height: 0.42rem;
+			background: url('../image/icon_select.svg')no-repeat center;
+			background-size: cover;
+		}
+
+        .mine_title{
+			height:3.6rem;
+		}
+		.mine_title p{
+			color:#fff;
+			text-align: center;
+		}
+		.mine_title p:first-child{
+           font-size:0.36rem;
+			padding:0.3rem 0 1rem 0;
+		}
+		.mine_title p:last-child{
+          font-size:0.48rem;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="call_out">
+		<header>
+			<div class="head_title head_item" style="display:block">
+				<div class="waper_m">
+					<p>外呼</p>
+					<div class="search">
+						<input type="text" readonly="readonly" />
+						<span class="shoso"></span>
+					</div>
+				</div>
+
+			</div>
+			<div class="analysis_title head_item" style="display:none">
+				<div class="waper_s">
+				<span class="back"></span>
+				<p>数据分析</p>
+               <span class="button" id="analysisBnt">
+
+               </span>
+				</div>
+			</div>
+			<div class="mine_title head_item" style="display:none">
+				<p>我的</p>
+				<p>18368571381</p>
+			</div>
+		</header>
+		<div class="main"></div>
+		<footer>
+			<ul class="footer_list">
+				<li active="true">
+					<span></span>
+					<span>外呼</span>
+				</li>
+				<li>
+					<span></span>
+					<span>数据分析</span>
+				</li>
+				<li>
+					<span></span>
+					<span>我的</span>
+				</li>
+			</ul>
+		</footer>
+	</div>
+</body>
+<script src="../script/initsize.js"></script>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/init.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript">
+	var eles = document.getElementsByClassName('footer_list')[0].getElementsByTagName('li');
+	var header = document.getElementsByTagName('header')[0];
+	var footer = document.getElementsByTagName('footer')[0];
+	var search = document.getElementsByClassName('search')[0]
+	var headers = header.getElementsByClassName('head_item')
+	var analysisbnt = document.getElementById("analysisBnt");
+	apiready = function() {
+		fix_android_ios('white')
+
+		openFrames(arrFrames[0], {})
+		switchFrame()
+		search.addEventListener('click', function() {
+			open_w('searchWin', './search_win.html', {})
+		}, false)
+		analysisbnt.addEventListener("click",function(){
+			var header = document.getElementsByTagName('header')[0];
+			var headheight = $api.offset(header).h
+			popUpList(headheight,{})
+		},false)
+	};
+
+	var arrFrames = (function() {
+		var arr_f = [];
+		for (var i = 0; i < eles.length; i++) {
+			var frameparams = {};
+			switch (i) {
+				case 0:
+					frameparams.name = "breathe";
+					frameparams.url = "./breathe_frame.html";
+					break;
+				case 1:
+					frameparams.name = "analysis";
+					frameparams.url = "./analysis_frame.html";
+					break;
+				case 2:
+					frameparams.name = "mine";
+					frameparams.url = "./mine_frame.html";
+					break;
+
+					defualt:
+						break;
+			}
+			arr_f.push(frameparams)
+		}
+		return arr_f;
+	})()
+
+	function openFrames(path, params) {
+		var header = document.getElementsByTagName('header')[0];
+		if (is_define(pageParam)) {
+			var pageParam = params;
+		} else {
+			var pageParam = new Object();
+		}
+		//alert(JSON.stringify($api.offset(header).h))
+		api.openFrame({
+			name: path.name,
+			url: path.url,
+			rect: {
+				x: 0,
+				y: $api.offset(header).h,
+				w: api.winWidth,
+				h: api.winHeight - ($api.offset(header).h + $api.offset(footer).h)
+			},
+			pageParam: pageParam,
+			bounces: true,
+			//allowEdit : true,
+			bgColor: 'rgba(246,246,246,1)', //'rgba(ee,ee,ee,1)
+			//vScrollBarEnabled : true,
+			//hScrollBarEnabled : true,
+			reload: true
+		});
+
+	}
+
+	function switchFrame() {
+		for (var i = 0; i < eles.length; i++) {
+			(function(i) {
+				eles[i].addEventListener('click', function(){
+					headers[i].style.display = "block"
+					if(i==0){
+						header.style.backgroundImage = "url(../image/heaer_bg.png)"
+						header.style.backgroundSize = "cover"
+					}else if(i==1){
+
+						header.style.background = "#1177ee";
+					}else if(i==2){
+						header.style.backgroundImage = "url(../image/mine_bg.svg)"
+						header.style.backgroundSize = "cover"
+					}
+					var allChildelems = this.parentNode.children;
+					$api.attr(this, 'active', 'true');
+
+					for (var a = 0; a < allChildelems.length; a++) {
+						if (allChildelems[a] !== this) {
+							$api.removeAttr(allChildelems[a], 'active');
+						}
+					}
+					for(var k = 0; k<arrFrames.length;k++){
+						if(arrFrames[i] !== arrFrames[k]){
+							hiddenFrame(arrFrames[k])
+						}
+					}
+					for (var t = 0; t< headers.length;t++ ){
+						if(headers[i] !== headers[t]){
+							headers[t].style.display = "none"
+						}
+					}
+					openFrames(arrFrames[i], {})
+					//alert($api.offset(header).h)
+				}, false)
+			})(i)
+		}
+	}
+
+	function searchWin() {
+
+	}
+    //数据分析顶部弹窗
+	function popUpList(headerHeight,pageParam){
+		if(is_define(pageParam))
+		{
+			var pageParam=pageParam;
+		}
+		else
+		{
+			var pageParam=new Object();
+		}
+		api.openFrame({
+			name: 'analysispopUp',
+			url: './analysisPopUp_frame.html',
+			rect: {
+				x: 0,
+				y: headerHeight,
+				w: api.winWidth,
+				h: api.winHeight-headerHeight
+			},
+			bgColor:'rgba(0,0,0,0.5)',
+			pageParam:pageParam,
+			bounces: false
+		});
+	}
+//隐藏frame
+	function hiddenFrame(frameArr){
+		api.setFrameAttr({
+			name: frameArr.name,
+			bounces: true,
+			hidden:true,
+	//		vScrollBarEnabled: true,
+//			hScrollBarEnabled: true
+		});
+	}
+
+	//用户登录页面
+	function openLogin() {
+		api.openWin({
+			name: 'login',
+			url: 'html/win-login.html',
+			pageParam: {
+				name: 'test'
+			}
+		});
+
+	}
+</script>
+
+</html>

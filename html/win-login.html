@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/user.css" />
+    <link rel="stylesheet" type="text/css" href="../css/myfont/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <script>
+        document.getElementsByTagName('html')[0].style.fontSize = (document.documentElement.clientWidth < 750) ? (document.documentElement.clientWidth /7.50 + "px") : "100px";
+    </script>
+</head>
+
+<body>
+  <div id="wrap" class="">
+   <div class="header-box"></div>
+    <div  class="user-login">
+       <div class="logo"></div>
+       <div class="login-button icon-tel-icon"><input type="text"  placeholder="请输入手机号" id="tel" ></div>
+        <div class="login-button icon-pwd"><input type="password"  placeholder="请输入密码" id="passwd" ></div>
+       <div class="submit"><input type="button" value="安全登录"  class="submit-login" id="login"> </div>
+        <p class="site-name">版权所有 © 北京中润普达信息技术有限公司</p>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/tools.js"></script>
+<script type="text/javascript" src="../script/sessions.js"></script>
+<script type="text/javascript" src="../script/route.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+      //状态栏字体为白色，适用于深色背景
+      var header = $api.dom(".header-box"); //$api.byId('header');
+      //适配iOS7+，Android4.4+状态栏沉浸式效果，详见config文档statusBarAppearance字段
+      $api.fixStatusBar(header);
+      api.setStatusBarStyle({
+          style: 'light'
+      });
+      userAction();
+      login();
+    };
+
+
+   function login(){
+     //登录操作
+     $api.addEvt($api.byId("login"), 'click', function(){
+         if(checkUserTel()){//手机号码验证成功，去验证密码
+            if(checkUserPassword()){//密码验证通过，请求服务器登录系统
+                  saveUserInfo();
+            }
+
+         }else{//手机号码验证失败
+           return false;
+         }
+     });
+
+   }
+
+  function userAction(){
+     $api.addEvt($api.byId("tel"), 'blur', function(){
+        checkUserTel();
+     });
+     $api.addEvt($api.byId("passwd"), 'blur', function(){
+        checkUserPassword();
+     });
+
+  }
+   //验证电话号码
+   function checkUserTel(){
+     if(checkEmpty($api.byId("tel"),"请输入手机号码")){
+        return checkTel($api.val($api.byId("tel")) );
+     }else{
+       return false;//验证失败
+     }
+   }
+
+   //验证密码是否为空
+   function checkUserPassword(){
+     return checkEmpty($api.byId("passwd"),"请输入密码")
+   }
+
+  //登录成功记录用户信息
+  function saveUserInfo(){
+    var userEntity = {
+							userId : 1,
+							nickName : 'test',
+							tel : '18627138633'
+		};
+	  sessionAgent.setLoginInfo(userEntity);
+    api.closeWin();//关闭当前窗口
+
+    openMain('main_win.html');
+  }
+</script>
+
+</html>

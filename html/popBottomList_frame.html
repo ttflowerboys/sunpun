@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"/>
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>popBottonList</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/popBottom.css" />
+    <title>Title</title>
+</head>
+<body>
+  <div id="pop_bottom_list">
+      <ul class="pop_list">
+          <li>呼叫</li>
+          <li>发短信</li>
+          <li>查看/更新基本资料</li>
+          <li>取消</li>
+      </ul>
+  </div>
+</body>
+<script src="../script/initsize.js"></script>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/init.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script>
+    var selecBnt = document.getElementsByClassName('pop_list')[0].getElementsByTagName('li')
+    apiready = function(){
+        var pageParams = get_par()
+       // alert(JSON.stringify(headHeight))
+        selectBnt(pageParams)
+    }
+
+    function selectBnt(params){
+        for(var i = 0; i<selecBnt.length;i++){
+            (function(i){
+                selecBnt[i].addEventListener('click',function(){
+                    switch(i){
+                        case 0:
+                            call_tel(params.tel)
+
+                            monitoringFrame(params.headHeight,params)
+                            break;
+                        case 1:
+                           // send_sms(params.tel,'测试短信',function(){alert('成功后回调')})
+                            openSendSmsWin(params)
+                            break;
+                        case 2:
+                            params.callstates == 1  ? openfillInwin(params) : openusredetails(params)
+
+                            break;
+                        case 3:
+                            api.closeFrame({
+                                name: 'popBottom'
+                            });
+                            break;
+                    }
+                    api.closeFrame({
+                        name: 'popBottom'
+                    });
+                },false)
+            })(i)
+        }
+    }
+
+
+    function openfillInwin(params){
+        //alert('进入填写资料页面')
+        if(is_define(params))
+        {
+            var pageParam=params;
+        }
+        else
+        {
+            var pageParam=new Object();
+        }
+        api.openWin({
+            name: 'fillIn',
+            url: './fillIn_win.html',
+            pageParam:pageParam
+        });
+    }
+
+    function openusredetails(params){
+        if(is_define(params))
+        {
+            var pageParam=params;
+        }
+        else
+        {
+            var pageParam=new Object();
+        }
+        api.openWin({
+            name: 'userDetails',
+            url: './userDetails_win.html',
+            pageParam: pageParam
+        });
+    }
+
+
+    //电话监听弹窗
+    function monitoringFrame(headerHeight,params){
+        var headHeight = headerHeight.headerH;
+        if(is_define(params))
+        {
+            var pageParam=params;
+        }
+        else
+        {
+            var pageParam=new Object();
+        }
+
+        api.openFrame({
+            name: 'monitoring',
+            url: './monitorin_frame.html',
+            rect: {
+                x: 0,
+                y: headHeight,
+                w: api.winWidth,
+                h: api.winHeight-headHeight,
+            },
+            bgColor:'rgba(0,0,0,0.5)',
+            pageParam:pageParam,
+            bounces: false
+        });
+    }
+
+
+    function openSendSmsWin(params){
+        if(is_define(params))
+        {
+            var pageParam=params;
+        }
+        else
+        {
+            var pageParam=new Object();
+        }
+        api.openWin({
+            name: 'sendSMS',
+            url: './sendSms_win.html',
+            pageParam: pageParam
+        });
+    }
+</script>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/user.css" />
+    <link rel="stylesheet" type="text/css" href="../css/myfont/style.css" />
+    <script>
+        document.getElementsByTagName('html')[0].style.fontSize = (document.documentElement.clientWidth < 750) ? (document.documentElement.clientWidth / 7.50 + "px") : "100px";
+    </script>
+    <title>我的</title>
+</head>
+
+<body class="user-index">
+
+    <div class="user-item">
+        <div class="item icon-list"><span>呼叫清单</span></div>
+        <div class="item icon-made"><span>需求定制</span></div>
+        <div class="item icon-notice"><span>通知中心</span><i class="notice-num">200</i></div>
+    </div>
+    <div class="user-quit"> <input type="button" value="退出" class="quit"></div>
+</body>
+<script src="../script/initsize.js"></script>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/sessions.js"></script>
+<script type="text/javascript" src="../script/route.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        //点击退出
+        $api.addEvt($api.dom(".quit"), 'click', function() {
+            loginOut();
+        });
+
+        //点击呼叫清单
+        $api.addEvt($api.dom(".icon-list"), 'click', function() {
+            openWinTelList();
+        });
+        //需求定制
+        $api.addEvt($api.dom(".icon-made"), 'click', function() {
+            openWin('需求定制', 'winMade','frmMade', 'frm-made.html',false);
+        });
+        //通知中心
+        $api.addEvt($api.dom(".icon-notice"), 'click', function() {
+            openWin('通知中心', 'winNotice','frmNotice', 'frm-notice.html',true);
+        });
+
+
+    };
+
+    //退出系统
+    function loginOut() {
+        sessionAgent.clearLoginInfo();
+        openLogin('win-login.html');
+    }
+    //打开呼叫清单
+    function openWinTelList() {
+        api.openWin({
+            name: 'win-tellist',
+            url: 'win-tellist.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+
+    }
+
+    function openWin(title, winName, frmName,frmhtml,isBounces) {
+        api.openWin({
+            name: winName,
+            url: 'win-common.html',
+            pageParam: {
+                winTitle: title,
+                frmName:frmName,
+                frmHtml: frmhtml,
+                bounces:isBounces
+            }
+        });
+    }
+</script>
+
+</html>

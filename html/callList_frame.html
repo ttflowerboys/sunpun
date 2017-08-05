@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"/>
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>callList</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/callList.css" />
+    <style>
+        .notdata{
+            position:absolute;
+            left:0;
+            top:30%;
+            width:100%;
+            display:none;
+        }
+        .not_bg{
+            width:3.6rem;
+            height:1.86rem;
+            background:url(../image/not_data_bg.svg)no-repeat center;
+            background-size: cover;
+            margin: 0 auto;
+        }
+        .content{
+            margin:0 auto;
+        }
+        .content p{
+            font-size:0.36rem;
+            text-align: center;
+            color:#333;
+            padding:0.45rem;
+        }
+    </style>
+</head>
+<body>
+ <div class="call_list_box" id="callListse">
+     <ul class="content_list">
+         <li>
+             <div class="call-bnt be_dialed">待拨</div>
+             <div class="call_details">
+                 <p>18368571381</p>
+
+             </div>
+             <div class="call_enter"></div>
+         </li>
+         <li>
+             <div class="call-bnt dialed">已拨</div>
+             <div class="call_details">
+                 <p >18368571381</p>
+                 <p class="Interestingly">有意向</p>
+             </div>
+             <div class="call_enter"></div>
+         </li>
+         <li>
+             <div class="call-bnt dialed">已拨</div>
+             <div class="call_details">
+                 <p >18368571381</p>
+                 <p class="Interestingly">有意向</p>
+             </div>
+             <div class="edit"></div>
+         </li>
+         <li>
+             <div class="call-bnt dialed">已拨</div>
+             <div class="call_details">
+                 <p>18368571381</p>
+                 <p  class="Nointention">无意向</p>
+             </div>
+             <div class="call_enter"></div>
+         </li>
+         <li>
+             <div class="call-bnt dialed">已拨</div>
+             <div class="call_details">
+                 <p >18368571381</p>
+                 <p class="aboutside">约见面</p>
+             </div>
+             <div class="call_enter"></div>
+         </li>
+         <li>
+             <div class="call-bnt not_dialed">未接通</div>
+             <div class="call_details">
+                 <p>18368571381</p>
+             </div>
+             <div class="call_enter"></div>
+         </li>
+     </ul>
+
+ </div>
+   <div class="notdata" id="not_bg" >
+       <div class="content">
+       <div class="not_bg"></div>
+       <p>暂无数据</p>
+       </div>
+   </div>
+</body>
+<script src="../script/initsize.js"></script>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/init.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script>
+    var listBnt = document.getElementsByClassName('call-bnt');
+    var boxList = document.getElementsByClassName('content_list')[0].getElementsByTagName('li')
+    var notData = document.getElementById('not_bg');
+    var callListBox = document.getElementById('callListse')
+apiready = function(){
+    var pageParams = get_par()
+    popBottomFrame(pageParams)
+    ajaxType()
+}
+  function ajaxType(){
+      api.addEventListener({
+          name: 'request'
+      }, function (ret, err) {
+          if(ret){
+              //alert(ret.value.data)
+              if(ret.value.index == 2){
+                  notData.style.display = 'block';
+                  callListBox.style.display = 'none';
+              }else{
+                  notData.style.display = 'none';
+                  callListBox.style.display = 'block';
+              }
+          }
+
+      });
+  }
+
+ function popBottomFrame(pageParams){
+     for(var i = 0; i<boxList.length;i++){
+         (function(i){
+             boxList[i].addEventListener('click',function(){
+                 var editList = this.getElementsByClassName('edit')
+                 var Callbnt= this.getElementsByClassName('call-bnt')[0];
+                 var callstate = null;
+                 switch(Callbnt.textContent){
+                     case "待拨":
+                         callstate = 0
+                         break;
+                     case "已拨":
+                         callstate = 1
+                         break;
+                     case "未接通":
+                         callstate = 0
+                         break;
+                 }
+                 if(editList && editList.length>0){
+                     callstate = 2
+                     openusredetails({tel:18368571381,callstates:callstate})
+                  }else{
+                     opentPopBottom(pageParams,{tel:18368571381,callstates:callstate})
+                 }
+
+             },false)
+         })(i)
+     }
+ }
+    function openusredetails(params){
+        if(is_define(params))
+        {
+            var pageParam=params;
+        }
+        else
+        {
+            var pageParam=new Object();
+        }
+        api.openWin({
+            name: 'userDetails',
+            url: './userDetails_win.html',
+            pageParam: pageParam
+        });
+    }
+
+    //打开底部弹框；
+    function opentPopBottom(headHeights,params){
+        var headHeight = headHeights.headerH;
+        if(is_define(params))
+        {
+            var pageParam=params;
+                pageParam.headHeight =  headHeights
+        }
+        else
+        {
+            var pageParam=new Object();
+                pageParam.headHeight =  headHeights
+        }
+        api.openFrame({
+            name: 'popBottom',
+            url: './popBottomList_frame.html',
+            rect: {
+                x: 0,
+                y: headHeight,
+                w: api.winWidth,
+                h: api.winHeight-headHeight,
+            },
+            bgColor:'rgba(0,0,0,0.5)',
+            pageParam:pageParam,
+            bounces: false
+        });
+    }
+
+</script>
+</html>

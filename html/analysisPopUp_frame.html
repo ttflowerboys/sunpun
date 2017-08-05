@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"/>
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/popUp.css" />
+    <title>Title</title>
+</head>
+<body>
+<div id="popUp_select">
+    <ul>
+        <li><span style="color:#1177ee">全部</span><span class="selectOk"></span></li>
+        <li><span>房产模型1</span><span></span></li>
+        <li><span>房产模型2</span><span></span></li>
+        <li><span>房产模型3</span><span></span></li>
+        <li><span>房产模型4</span><span></span></li>
+
+    </ul>
+</div>
+</body>
+<script src="../script/initsize.js"></script>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/init.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script>
+
+
+    var ListLi = document.getElementsByTagName('ul')[0].getElementsByTagName('li')
+    apiready = function(){
+        selectList();
+    }
+
+    function selectList(){
+        for(var i = 0;i<ListLi.length;i++){
+            (function(i){
+                ListLi[i].addEventListener('click',function(){
+                    var allChildelems = this.parentNode.children;
+                    var spanlebel = this.getElementsByTagName('span');
+                    spanlebel[1].className='selectOk'
+                    spanlebel[0].style.color = "#1177ee";
+                    //statusType(i)
+                    for (var a = 0; a < allChildelems.length; a++) {
+                        if (allChildelems[a] !== this) {
+                            var spanAll = allChildelems[a].getElementsByTagName('span')
+                            spanAll[0].style.color = "#333"
+                            spanAll[1].className = '';
+                        }
+                    }
+
+                    setTimeout(function(){
+                        api.setFrameAttr({
+                            name: 'analysispopUp',
+                            hidden:true,
+                        });
+                    },300)
+
+                },false)
+            })(i)
+        }
+    }
+</script>
+</html>

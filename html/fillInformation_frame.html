@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"/>
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/information.css" />
+    <title>fillInformation</title>
+</head>
+<body>
+<div id="information">
+    <ul class="user Column">
+        <li>用户信息管理</li>
+        <li>
+            <div class="item_box">
+                <p>姓名</p>
+                <p>黄小明</p>
+            </div>
+        </li>
+        <li>
+            <div class="item_box">
+                <p>性别</p>
+                <p>男</p>
+            </div>
+        </li>
+        <li>
+            <div class="item_box">
+                <p>年龄</p>
+                <p>18岁以下</p>
+            </div>
+        </li>
+        <li>
+            <div class="item_box">
+                <p>有无子女</p>
+                <p>有</p>
+            </div>
+        </li>
+        <li>
+            <div class="item_box">
+                <p>子女年龄</p>
+                <p>18岁以下</p>
+            </div>
+        </li>
+        <li>
+            <div class="item_box">
+                <p>用户意向 <span class="required">（必填）</span></p>
+                <p>有意向</p>
+            </div>
+        </li>
+        <li>
+            <div class="item_box">
+                <p>备注</p>
+                <p>备注信息</p>
+            </div>
+        </li>
+
+    </ul>
+    <ul class="call Column">
+        <li>通话信息</li>
+     <li>
+         <span>客户信息:</span>
+         <span>17023232323</span>
+     </li>
+        <li>
+            <span>通话时间:</span>
+            <span>2017.7.27 14:02 至 2017.7.27 14:12</span>
+        </li>
+    </ul>
+    <ul class="basic Column">
+        <li>
+            基本信息
+        </li>
+        <li>
+            <span>客户信息:</span>
+            <span>17023232323</span>
+        </li>
+        <li>
+            <span>动作:</span>
+            <span>中润装修专题>装修A02>重点动作>参谋家
+                 WAP户型设计
+            </span>
+        </li>
+        <li>
+            <span>PV:</span>
+            <span>17</span>
+        </li>
+        <li>
+            <span id="msg">访问时间:</span>
+            <span>20170725</span>
+        </li>
+    </ul>
+    <div class="callbnt">
+        <p>呼叫</p>
+    </div>
+</div>
+</body>
+<script src="../script/initsize.js"></script>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/init.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script>
+    var optionList = document.getElementsByClassName('user')[0].getElementsByTagName('li');
+    var Remarks = '备注信息';
+    var column = document.getElementsByClassName('Column')
+    var callBnt = document.getElementsByClassName('callbnt')[0].getElementsByTagName('p')[0]
+    apiready = function(){
+        var pageParams = get_par()
+
+        selectOption();
+        showColumn(pageParams.callstates)
+    }
+     function showColumn(index){
+          switch(index){
+              case 0:
+                  column[0].style.display = "none"
+                  column[1].style.display = "none"
+                  callBnt.textContent = "呼叫";
+                  break;
+              case 1:
+                  callBnt.style.display = "none";
+                  break;
+              case 2:
+                  column[0].style.display = "none"
+                  callBnt.textContent = "填写";
+                  break;
+          }
+
+     }
+    function selectOption(){
+        for(var i = 0; i<optionList.length;i++){
+            (function(i){
+                optionList[i].addEventListener('click',function(){
+                    if(i == 0) {return false};
+
+                    var eles = this.getElementsByClassName('item_box')[0].getElementsByTagName('p')[0]
+                    var elesvalue = this.getElementsByClassName('item_box')[0].getElementsByTagName('p')[1]
+                    var _params = {};
+                       //alert(eles)
+                    _params.title = eles.textContent;
+                    _params.index = i;
+                    if(i==7){
+                        _params.value = Remarks
+                    }else{
+                        _params.value = elesvalue.textContent
+                    }
+
+                    openOptionWin(_params)
+                    //alert(JSON.stringify(_params))
+                },false)
+            })(i)
+        }
+    }
+    function openOptionWin(params){ //打开保存窗口；
+       if(is_define(params)){
+           var pageParams = params
+       }else{
+           var pageParams = new Object();
+       }
+
+        api.openWin({
+            name: 'saveOption',
+            url: './saveOption_win.html',
+            pageParam:pageParams
+        }); 
+    }
+
+    function getMsg(params,index){
+
+        var boxDiv = optionList[index].getElementsByClassName('item_box')[0];
+        var valuBox = boxDiv.getElementsByTagName('p')[1]
+        //alert(valuBox)
+        if(index == 7){
+            Remarks = params
+            valuBox.textContent = strText(params,2)
+        }else{
+            valuBox.textContent = params;
+        }
+
+    }
+
+    function strText(strs ,len){
+        var char_length = 0;
+        for (var i = 0; i < strs.length; i++){
+            var son_str = strs.charAt(i);
+
+            encodeURI(son_str).length > 2 ? char_length += 1 : char_length += 0.5;
+
+            if (char_length >= len){
+                var sub_len = char_length == len ? i+1 : i;
+                return strs.substr(0, sub_len)+'...';
+                break;
+            }
+            return strs;
+        }
+
+    }
+</script>
+</html>
