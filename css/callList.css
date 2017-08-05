@@ -1,0 +1,91 @@
+@charset "UTF-8";
+html,body{
+    font-size:0.2rem;
+    background:#f6f6f6;
+}
+ul.content_list li{
+    background:#fff;
+    margin-bottom:0.1rem;
+    padding:0.45rem 0.3rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.call-bnt{
+    height:0.5rem;
+    width:1rem;
+    border-radius: 0.08rem;
+    text-align: center;
+    line-height: 0.5rem;
+    font-size:0.24rem;
+}
+.call_enter{
+    width:0.28rem;
+    height:0.46rem;
+    background:url('../image/icon_enter.svg')no-repeat center;
+    background-size:cover;
+}
+.dialed{
+    background:#7fd93c;
+    color:#fff;
+}
+.be_dialed{
+    background:#1177ee;
+    color:#fff;
+}
+.not_dialed{
+    background:#8d98a7;
+    color:#fff;
+}
+.call_details{
+    width:5rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.call_details p:first-child{
+    margin-right:0.3rem;
+}
+.call_details p:last-child{
+   display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+.Interestingly:before{
+  content:"";
+  display:inline-block;
+  width:0.48rem;
+  height:0.48rem;
+  background:url('../image/icon_face.svg')no-repeat center;
+  background-size:cover;
+    margin-right:0.1rem;
+}
+.Nointention:before{
+    content:"";
+    display:inline-block;
+    width:0.48rem;
+    height:0.48rem;
+    background:url('../image/icon_face_02.svg')no-repeat center;
+    background-size:cover;
+    margin-right:0.1rem;
+}
+.aboutside:before{
+    content:"";
+    display:inline-block;
+    width:0.48rem;
+    height:0.48rem;
+    background:url('../image/icon_face_01.svg')no-repeat center;
+    background-size:cover;
+    margin-right:0.1rem;
+}
+.edit{
+    width:0.48rem;
+    height:0.48rem;
+    background:url('../image/icon_edies.svg')no-repeat center;
+    background-size:cover;
+}
+
+/**暂无数据样式****/
+
