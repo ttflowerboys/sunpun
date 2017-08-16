@@ -1,4 +1,4 @@
-html, body, h1, h2, h3, p, span, a, div, ol, ul, li, dl, dt, dd, table, tbody, tfoot, thead, tr, th, td, input, textarea, form {margin: 0;padding: 0;font-family:'Microsoft Yahei',Arial,Verdana,Helvetica,sans-serif;-webkit-tap-highlight-color: rgba(0,0,0,0);color: #333;box-sizing: border-box;}
+html, body, h1, h2, h3, p, span, a, div, ol, ul, li, dl, dt, dd, table, tbody, tfoot, thead, tr, th, td, input, textarea, form {margin: 0;padding: 0;font-family:'Microsoft Yahei',Arial,Verdana,Helvetica,sans-serif;-webkit-tap-highlight-color: rgba(0,0,0,0);box-sizing: border-box;}
 ul,li{list-style: none;}
 input,textarea,img{border: 0;outline: none;}
 img{vertical-align: top;}
@@ -8,7 +8,7 @@ a{color: #000;text-decoration: none;}
 input, textarea, keygen, select, button {margin: 0em;font: -webkit-small-control;color: initial;letter-spacing: normal;word-spacing: normal;text-transform: none;text-indent: 0px;text-shadow: none;display: inline-block;text-align: start;}
 article, aside, footer, header, hgroup, main, nav, section {display: block;}
 .viewport{height: auto;width: 720px;margin: 0 auto;}
-
+.tac{text-align: center;}
 .t-blue{color: #3f61a1;}
 .t-gold{color: #e6b57c;}
 
@@ -31,7 +31,7 @@ article, aside, footer, header, hgroup, main, nav, section {display: block;}
   width: 155px;
   height: 306px;
   float: left;
-  margin: 0 10px 20px;
+  margin: 0 10px 56px;
   border-radius: 77px;
   overflow: hidden;
 }
@@ -83,4 +83,62 @@ article, aside, footer, header, hgroup, main, nav, section {display: block;}
   font-size: 12px;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+.textTitle{  
+  text-align: center;
+  margin-bottom: 24px;
+}
+.textTitle strong{
+  position: relative;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #474747;
+  height: 30px;  
+  padding: 0 22px;
+  display: inline-block;
+}
+.textTitle strong:before,.textTitle strong:after{
+  position: absolute;
+  display: block;
+  line-height: 18px;
+}
+.textTitle strong:before{  
+  top: 0;
+  left: 0;
+  content: "┌";  
+}
+.textTitle strong:after{
+  bottom: 0;
+  right: 0;
+  content: "┘";
+}
+
+.wPic{margin-bottom: 76px;}
+.wPic img{width: 100%;}
+
+.slogan{
+  font-size: 13px;
+  line-height: 22px;
+  color: #3a3a3a;
+  text-align: center;
+}
+
+.footer{
+  width: 100%;
+  height: 340px;
+  margin-top: 60px;
+  padding-top: 132px;
+  background: #0e3a45 url(../images/footer.jpg) center no-repeat;
+  text-align: center;
+  color: #fff;
+}
+.copyright{
+  font-size: 15px;
+  line-height: 20px;
+  padding-bottom: 66px;
+  padding-top: 10px;
+  background: url(../images/copyright.png) center bottom no-repeat;
+  clear: both;
 }
