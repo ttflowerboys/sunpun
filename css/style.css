@@ -473,18 +473,16 @@ background-image: linear-gradient(to right, #157db7, #2ed3df);}
 .newsList li:hover img,
 .teamCardList .detail:hover img{ -webkit-transform: scale(1.03);-moz-transform: scale(1.03);transform: scale(1.03)}
 
-.indexVideo{overflow: hidden;}
+.indexVideo{position: relative;width: 1200px;margin: 0 auto;overflow: hidden;}
 .indexVideo .js-sCont{
   position: relative;
   width: 772px;
   height: 500px;
-  margin-left: 32px;
   float: left;
 }
 .indexVideo .js-sDot{
   width: 378px;
   height: 500px;
-  margin-right: 32px;
   float: right;
 }
 /* indexVideoCardList */
