@@ -1,0 +1,30 @@
+html, body, h1, h2, h3, p, span, a, div, ol, ul, li, dl, dt, dd, table, tbody, tfoot, thead, tr, th, td, input, textarea, form {margin: 0;padding: 0;font-family:'Microsoft Yahei',Arial,Verdana,Helvetica,sans-serif;-webkit-tap-highlight-color: rgba(0,0,0,0);color: #333;box-sizing: border-box;}
+ul,li{list-style: none;}
+input{border: 0}
+img{border: 0;}
+i,b,em,strong{font-weight: normal;font-style: normal;padding: 0;margin: 0;}
+a{color: #000;text-decoration: none;}
+input, textarea, keygen, select, button {margin: 0em;font: -webkit-small-control;color: initial;letter-spacing: normal;word-spacing: normal;text-transform: none;text-indent: 0px;text-shadow: none;display: inline-block;text-align: start;}
+input, textarea {outline: 0;}
+article, aside, footer, header, hgroup, main, nav, section {display: block;}
+body{height: auto;width: 640px;margin: 0 auto;}
+#wrap{position: relative;width: 100%;font-size: 14px;}
+#wrap .bg{width: 640px;height: 1474px;}
+
+.formBox{position: absolute;top: 1036px;left: 50%;margin-left: -233px;z-index: 2;padding: 20px;width: 466px;height: 392px;background: #054681;border-radius: 12px;}
+.formBox .formItems{height: 52px;margin-bottom: 15px;background: #e9b442;
+    background: -webkit-linear-gradient(#e9b442, #edcf81, #cda447);
+    background: -o-linear-gradient(#e9b442, #edcf81, #cda447);
+    background: -moz-linear-gradient(#e9b442, #edcf81, #cda447);
+    background: linear-gradient(#e9b442, #edcf81, #cda447);
+}
+.formBox input[type=image]{margin: 0 auto;display: block;}
+.formBox .lable{width: 110px;line-height: 52px;letter-spacing: 4px;display: block;float: left;text-align: center;color: #000;font-size: 26px;}
+.formBox .Input{width: 310px;float: left;background: #fff;display: block;}
+.formBox .Input .ipt{width: 100%;padding: 10px;height: 52px;font-size: 26px}
+.formBox .items{position: relative;height: 46px;padding-right: 72px;font-size: 24px;color: #000;line-height: 46px;}
+.formBox .items input{height: 46px;padding: 5px;width: 100%;border-bottom: 2px dashed #000;vertical-align: top;}
+.formBox .items span{position: absolute;right: 0;width: 72px;text-align: center;}
+.City {height: 42px;}
+.City .prov{width: 48%;height: 42px;font-size: 24px;float: left;border: 0;border-bottom: 2px dashed #000;}
+.City .city{width: 48%;height: 42px;font-size: 24px;float: right;border: 0;border-bottom: 2px dashed #000;}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta content="width=640,target-densitydpi=device-dpi" name="viewport">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: none repeat scroll 0% 0% rgb(213, 213, 214);">
+    <div id="wrap">
+        <img src="images/bg.jpg" alt="" class="bg">
+        <div class="formBox">
+            <form action="">
+                <div class="formItems">
+                    <lable class="lable">名字</lable>
+                    <div class="Input"><input type="text" class="ipt" required></div>
+                </div>
+                <div class="formItems">
+                    <lable class="lable">电话</lable>
+                    <div class="Input"><input type="text" class="ipt" required></div>
+                </div>
+                <div class="formItems" style="height: 146px;margin-bottom: 10px">
+                    <lable class="lable">地址</lable>
+                    <div class="Input" style="height: 146px;padding: 0 6px">
+	                    <div id="city_1" class="City">
+	                    	<select class="prov" required></select>
+	                    	<select class="city" disabled="disabled" required></select>
+	                    </div>
+	                    <div class="items"><input type="text" required><span>街道</span></div>
+	                    <div class="items"><input type="text" required><span>小区</span></div>
+	                </div>
+                </div>
+                <input type="image" src="images/submit.png">
+            </form>
+        </div>
+    </div>
+    <script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="images/jquery.cityselect.js"></script>
+    <script>
+$(function(){
+	$("#city_1").citySelect({prov:"北京",nodata:"none"});
+})
+    </script>
+</body>
+</html>
