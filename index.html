@@ -1,0 +1,718 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="viewport" content="user-scalable=no,width=375,viewport-fit=cover">
+    <title>解密我的新年“红”运</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style>
+        html {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /*@font-face {
+            font-family: "SourceHanSansCN-Medium";
+            src: url("font/SourceHanSansCN-Medium 3.woff2") format("woff2"),
+            url("font/SourceHanSansCN-Medium 3.woff") format("woff"),
+            url("font/SourceHanSansCN-Medium 3.ttf") format("truetype"),
+            url("font/SourceHanSansCN-Medium 3.eot") format("embedded-opentype"),
+            url("font/SourceHanSansCN-Medium 3.svg") format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }*/
+
+        @font-face {
+            font-family: "webfont";
+            src: url('font/webfont_004.eot'); /* IE9 */
+            src: url('font/webfont_004.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('font/webfont_004.woff') format('woff'), /* chrome、firefox */
+            url('font/webfont_004.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url('font/webfont_004.svg#webfont') format('svg'); /* iOS 4.1- */
+        }
+
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #b1221a;
+            font-size: 14px;
+            font-family: "webfont", Helvetica, Arial, sans-serif;
+            text-align: center;
+            color: #f8d2a0;
+            font-weight: lighter;
+        }
+
+        .siyuan-font {
+            font-family: "webfont" !important;
+            color: #e9c799;
+            font-size: 14px;
+            font-style:normal !important;
+            -webkit-font-smoothing: antialiased !important;
+            -webkit-text-stroke-width: 0.2px !important;
+            -moz-osx-font-smoothing: grayscale !important;
+            margin: 0;
+            padding: 0;
+            line-height: 18px;
+        }
+
+
+        input[type="radio"] {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+        }
+
+        input[type="radio"] + label::before {
+            content: '';
+            background: transparent;
+            border: 1px solid #e9c799;
+            width: 12px;
+            height: 12px;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            float: left;
+            margin-right: 6px;
+            margin-top: 4px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"]:checked + label::before {
+            background-color: #e9c799;
+            -webkit-background-clip: content-box;
+            background-clip: content-box;
+            padding: 2px;
+        }
+
+
+
+        .wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow:hidden;
+            margin:0 auto;
+            display: flex;
+            display: -webkit-flex;
+            align-items: center;
+            -webkit-align-items: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+        }
+
+        .container {
+            position: absolute;
+            width: 375px;
+            height: 724px;
+            left: 50%;
+            margin-left: -187.5px;
+            top: 50%;
+            margin-top: -362px;
+        }
+
+        .logo {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 50%;
+            margin-top: -250px;
+        }
+
+        .clear {
+            clear: both;
+            height: 0;
+            line-height: 0;
+            font-size: 0;
+        }
+
+        @keyframes loading {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes loading {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        .loading-text-container {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -25px;
+            margin-top: 45px;
+            z-index: 9;
+        }
+
+        .loading-text {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('loading/loading.png');
+            background-size: 100% 100%;
+            animation: loading 1.5s linear infinite;
+            -webkit-animation: loading 1.5s linear infinite;
+        }
+
+        .loadText {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            line-height: 50px;
+            text-align: center;
+            font-size: 14px;
+            color: #e3c086;
+            font-family: "webfont", Helvetica, Arial, sans-serif ;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+        
+        input::-webkit-input-placeholder {
+            color: #c37254;
+        }
+
+        .loadingPan .loading-logo {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 170px;
+        }
+
+        .loadingPan .loading-star {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            left: 50%;
+            top: 245px;
+            margin-left: -14px;
+            background-image: url("loading/star.png");
+            background-size: 100% 100%;
+        }
+
+        .loadingPan .loading-texts {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 295px;
+        }
+
+        .loadingPan .loading-pig {
+            position: absolute;
+            width: 50px;
+            height: 42px;
+            left: 50%;
+            top:50%;
+            margin-left: -25px;
+            margin-top: -21px;
+            background-image: url('loading/pig_run/pig_1.png');
+            background-size: 100% 100%;
+        }
+
+        .pig-run {
+            -webkit-animation: pigRun 0.5s steps(1) infinite;
+        }
+
+        .pig-left {
+            -webkit-animation: pigRunLeft 0.5s steps(1) infinite;
+        }
+
+        .pig-right {
+            -webkit-animation: pigRunRight 0.5s steps(1) infinite;
+        }
+
+        #swiper_container, .swiper-container {
+            width: 100%;
+            -webkit-perspective: 1200px;
+            perspective: 1200px;
+            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+        }
+
+        .swiper-wrapper {
+            margin-top: 140px;
+            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+        }
+
+        .swiper-slide {
+            width: 80%;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .swiper-slide .main-img {
+            width: 87%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        #pagination {
+            position: absolute;
+            bottom: 50px;
+            width: 90%;
+            left: 5%;
+        }
+
+        #pagination .swiper-pagination-bullet{
+            position: relative;
+            width: 49px;
+            float: left;
+            margin: 30px 4px 30px 4px;
+            background: none;
+            opacity: 1;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-user-select: none;
+            outline: none;
+            -webkit-box-sizing: border-box;
+        }
+
+        #pagination .swiper-pagination-bullet:nth-child(n + 1):nth-child(-n + 7) {
+            position: relative;
+            width: 49px;
+            float: left;
+            margin: 30px 3px 30px 4px;
+            background: none;
+            opacity: 1;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-user-select: none;
+            outline: none;
+            -webkit-box-sizing: border-box;
+        }
+
+        #pagination .swiper-pagination-bullet:nth-child(8) {
+            position: relative;
+            width: 49px;
+            float: left;
+            margin: 30px 3px 30px 30px;
+            background: none;
+            opacity: 1;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-user-select: none;
+            outline: none;
+            -webkit-box-sizing: border-box;
+        }
+
+
+        #pagination .swiper-pagination-bullet:nth-child(1) {
+            display: none;
+        }
+
+        .swiper-pagination-bullet i {
+            width: 49px;
+            height: 66px;
+            line-height: 66px;
+            display: block;
+            overflow: hidden;
+            margin: 0 auto;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-user-select: none;
+            outline: none;
+        }
+
+        .swiper-pagination-bullet-active i {
+            -webkit-transform-origin: 50% 50%;
+            -webkit-transform: scale(1.2);
+        }
+
+        .gate_active {
+            transition: all 1s linear !important;
+            transform: translate3d(0, -70px, 800px) !important;
+            opacity: 0 !important;
+        }
+
+        .logo-light {
+            /*-webkit-animation: logoLight 4.5s steps(1) infinite;*/
+        }
+
+        .redbag-fire {
+            -webkit-animation: redbagFire 2s steps(1) forwards;
+        }
+
+        .redbag-full-fire {
+            /*-webkit-animation: redbagFullFire 3.5s steps(1) forwards;*/
+            -webkit-animation: redbagFullFire 2.5s steps(1) forwards;
+        }
+
+        .redbag-front {
+            backface-visibility: hidden;
+        }
+
+        #result_container {
+            -webkit-overflow-scrolling: touch;
+        }
+
+        @-webkit-keyframes pigRun {
+            0% {
+                background-image: url('loading/pig_run/pig_1.png');
+            }
+            6% {
+                background-image: url('loading/pig_run/pig_2.png');
+            }
+            12% {
+                background-image: url('loading/pig_run/pig_3.png');
+            }
+            18% {
+                background-image: url('loading/pig_run/pig_4.png');
+            }
+            24% {
+                background-image: url('loading/pig_run/pig_5.png');
+            }
+            30% {
+                background-image: url('loading/pig_run/pig_6.png');
+            }
+            36% {
+                background-image: url('loading/pig_run/pig_7.png');
+            }
+            42% {
+                background-image: url('loading/pig_run/pig_8.png');
+            }
+            48% {
+                background-image: url('loading/pig_run/pig_9.png');
+            }
+            54% {
+                background-image: url('loading/pig_run/pig_10.png');
+            }
+            60% {
+                background-image: url('loading/pig_run/pig_11.png');
+            }
+            66% {
+                background-image: url('loading/pig_run/pig_12.png');
+            }
+            72% {
+                background-image: url('loading/pig_run/pig_13.png');
+            }
+            78% {
+                background-image: url('loading/pig_run/pig_14.png');
+            }
+            84% {
+                background-image: url('loading/pig_run/pig_15.png');
+            }
+            90% {
+                background-image: url('loading/pig_run/pig_16.png');
+            }
+            100% {
+                background-image: url('loading/pig_run/pig_1.png');
+            }
+        }
+
+        @-webkit-keyframes pigRunLeft {
+            0% {
+                background-image: url('loading/pig_left/1.png');
+            }
+            10% {
+                background-image: url('loading/pig_left/2.png');
+            }
+            20% {
+                background-image: url('loading/pig_left/3.png');
+            }
+            30% {
+                background-image: url('loading/pig_left/4.png');
+            }
+            40% {
+                background-image: url('loading/pig_left/5.png');
+            }
+            50% {
+                background-image: url('loading/pig_left/6.png');
+            }
+            60% {
+                background-image: url('loading/pig_left/7.png');
+            }
+            70% {
+                background-image: url('loading/pig_left/8.png');
+            }
+            80% {
+                background-image: url('loading/pig_left/9.png');
+            }
+            90% {
+                background-image: url('loading/pig_left/10.png');
+            }
+            100% {
+                background-image: url('loading/pig_left/1.png');
+            }
+        }
+
+        @-webkit-keyframes pigRunRight {
+            0% {
+                background-image: url('loading/pig_right/1.png');
+            }
+            10% {
+                background-image: url('loading/pig_right/2.png');
+            }
+            20% {
+                background-image: url('loading/pig_right/3.png');
+            }
+            30% {
+                background-image: url('loading/pig_right/4.png');
+            }
+            40% {
+                background-image: url('loading/pig_right/5.png');
+            }
+            50% {
+                background-image: url('loading/pig_right/6.png');
+            }
+            60% {
+                background-image: url('loading/pig_right/7.png');
+            }
+            70% {
+                background-image: url('loading/pig_right/8.png');
+            }
+            80% {
+                background-image: url('loading/pig_right/9.png');
+            }
+            90% {
+                background-image: url('loading/pig_right/10.png');
+            }
+            100% {
+                background-image: url('loading/pig_right/1.png');
+            }
+        }
+
+        @-webkit-keyframes  logoLight {
+            0% {
+                background-image: url('loading/logo/logo_1.png');
+            }
+            2.5% {
+                background-image: url('loading/logo/logo_2.png');
+            }
+            5% {
+                background-image: url('loading/logo/logo_3.png');
+            }
+            7.5% {
+                background-image: url('loading/logo/logo_4.png');
+            }
+            10% {
+                background-image: url('loading/logo/logo_5.png');
+            }
+            12.5% {
+                background-image: url('loading/logo/logo_6.png');
+            }
+            15% {
+                background-image: url('loading/logo/logo_7.png');
+            }
+            17.5% {
+                background-image: url('loading/logo/logo_1.png');
+            }
+            100% {
+                background-image: url('loading/logo/logo_1.png');
+            }
+        }
+
+        @-webkit-keyframes redbagFullFire {
+            /*0% {
+                background-image: url('loading/full_fire/1.jpg');
+            }
+            4% {
+                background-image: url('loading/full_fire/2.jpg');
+            }
+            8% {
+                background-image: url('loading/full_fire/3.jpg');
+            }
+            12% {
+                background-image: url('loading/full_fire/4.jpg');
+            }
+            16% {
+                background-image: url('loading/full_fire/5.jpg');
+            }
+            20% {
+                background-image: url('loading/full_fire/6.jpg');
+            }
+            24% {
+                background-image: url('loading/full_fire/7.jpg');
+            }
+            28% {
+                background-image: url('loading/full_fire/8.jpg');
+            }
+            32% {
+                background-image: url('loading/full_fire/9.jpg');
+            }
+            36% {
+                background-image: url('loading/full_fire/10.jpg');
+            }
+            40% {
+                background-image: url('loading/full_fire/11.jpg');
+            }
+            44% {
+                background-image: url('loading/full_fire/12.jpg');
+            }
+            48% {
+                background-image: url('loading/full_fire/13.jpg');
+            }
+            52% {
+                background-image: url('loading/full_fire/14.jpg');
+            }
+            56% {
+                background-image: url('loading/full_fire/15.jpg');
+            }
+            60% {
+                background-image: url('loading/full_fire/16.jpg');
+            }
+            100% {
+                background-image: url('loading/full_fire/1.jpg');
+            }*/
+
+            0% {
+                background-image: url('loading/full_fire/1.jpg');
+            }
+            6% {
+                background-image: url('loading/full_fire/2.jpg');
+            }
+            12% {
+                background-image: url('loading/full_fire/3.jpg');
+            }
+            18% {
+                background-image: url('loading/full_fire/4.jpg');
+            }
+            24% {
+                background-image: url('loading/full_fire/5.jpg');
+            }
+            30% {
+                background-image: url('loading/full_fire/6.jpg');
+            }
+            36% {
+                background-image: url('loading/full_fire/7.jpg');
+            }
+            42% {
+                background-image: url('loading/full_fire/8.jpg');
+            }
+            48% {
+                background-image: url('loading/full_fire/9.jpg');
+            }
+            54% {
+                background-image: url('loading/full_fire/10.jpg');
+            }
+            60% {
+                background-image: url('loading/full_fire/11.jpg');
+            }
+            66% {
+                background-image: url('loading/full_fire/12.jpg');
+            }
+            72% {
+                background-image: url('loading/full_fire/13.jpg');
+            }
+            78% {
+                background-image: url('loading/full_fire/1.jpg');
+            }
+            100% {
+                background-image: url('loading/full_fire/1.jpg');
+            }
+        }
+
+    </style>
+    <script>
+      var loc = document.location;
+      if (loc.search.indexOf('redirect') < 0) {
+        if (loc.search.indexOf('?') >= 0) {
+          document.location.href = loc + '&redirect=' + parseInt((new Date()).getTime() / 10000);
+        } else {
+          document.location.href = loc + '?redirect=' + parseInt((new Date()).getTime() / 10000);
+        }
+      }
+    </script>
+    <!-- copy these lines to your document head: -->
+    <script type="text/javascript" charset="utf-8" src="//res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/swiper.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/loading.js"></script>
+    <script type="text/javascript" src="js/questions.js"></script>
+    <script type="text/javascript" src="js/main.js?code=10001"></script>
+</head>
+<body>
+<div id="wx_pic" style="width:0;height:0;overflow:hidden;">
+    <img src="share/logo.jpg">
+</div>
+
+<!-- copy these lines to your document: -->
+<!--替换id的名称 -->
+<div class="wrapper">
+    <div id="container" class="container" aria-live="polite">
+        <!-- inserted loader code: -->
+        <div class="preloadPan" style="display: none">
+            <img src="loading/bg.jpg">
+            <img src="loading/logo.png">
+            <img src="loading/pig_run/pig_1.png">
+            <img src="loading/pig_run/pig_2.png">
+            <img src="loading/pig_run/pig_3.png">
+            <img src="loading/pig_run/pig_4.png">
+            <img src="loading/pig_run/pig_5.png">
+            <img src="loading/pig_run/pig_6.png">
+            <img src="loading/pig_run/pig_7.png">
+            <img src="loading/pig_run/pig_8.png">
+            <img src="loading/pig_run/pig_9.png">
+            <img src="loading/pig_run/pig_10.png">
+            <img src="loading/pig_run/pig_11.png">
+            <img src="loading/pig_run/pig_12.png">
+            <img src="loading/pig_run/pig_13.png">
+            <img src="loading/pig_run/pig_14.png">
+            <img src="loading/pig_run/pig_15.png">
+            <img src="loading/pig_run/pig_16.png">
+        </div>
+
+        <div class="loadingPan" style="position:absolute;width:375px;height:724px;left:0;top:0;">
+            <!--<div class="loading-logo">
+                <img src="loading/logo.png">
+            </div>
+            <div class="loading-star"></div>
+            <div class="loading-texts">
+                <img src="loading/text.png">
+            </div>-->
+            <div class="loading-pig pig-run">
+
+            </div>
+            <div class="loading-text-container">
+                <div class="loading-text"></div>
+                <p class="loadText">0%</p>
+            </div>
+            <img src="loading/bg.jpg">
+        </div>
+        <!-- end inserted loader code -->
+    </div>
+</div>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?e9ef16ba89a96add54bb1932cf1d48fa";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    /**
+     * 统计点击提交
+     */
+    function track_buttons(opt) {
+        var category = '宝格丽201901';
+        if (opt && opt !== '' && _hmt) {
+        _hmt.push(['_trackEvent', category, 'click', opt]);
+        }
+    }
+</script>
+<script type="text/javascript" src="js/wxshare.js?code=10000"></script>
+</body>
+</html>
